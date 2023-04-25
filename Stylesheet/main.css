@@ -963,6 +963,98 @@ input[type=number] {
   background-color: #2350cd;
 }
 
+.review-container {
+  padding: 50px 0;
+}
+.review-container .review-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.review-container .review-heading h1 {
+  font-weight: 500;
+  font-size: 42px;
+}
+.review-container .reviews-body {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(345px, auto));
+  padding-top: 30px;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  row-gap: 25px;
+}
+.review-container .reviews-body .review-border-color {
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(180deg, #1338B0 0%, #0097FF 100%);
+  padding: 1px;
+  border-radius: 9px;
+}
+.review-container .reviews-body .review-border-color .review {
+  background: #fff;
+  padding: 0rem 2rem;
+  border-radius: 8px;
+}
+.review-container .reviews-body .review-border-color .review .top {
+  padding: 25px 0 15px 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.review-container .reviews-body .review-border-color .review .top .name {
+  font-weight: 500;
+  font-size: 22px;
+}
+.review-container .reviews-body .review-border-color .review .top .ratings {
+  margin: 0 20px;
+}
+.review-container .reviews-body .review-border-color .review .top .ratings svg {
+  font-size: 18px;
+}
+.review-container .reviews-body .review-border-color .review .read-btn {
+  padding: 15px 0 25px 0;
+}
+.review-container .reviews-body .review-border-color .review .read-btn a {
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+}
+.review-container .reviews-body .review-border-color .review .read-btn a:hover {
+  text-decoration: underline;
+}
+.review-container .further-links {
+  text-align: center;
+  padding: 40px 0 0 0;
+}
+.review-container .further-links h2 {
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.review-container .further-links .link-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review-container .further-links .link-img a {
+  display: inline-flex;
+  justify-content: center;
+}
+.review-container .further-links .link-img a img {
+  width: 100%;
+  max-width: 100px;
+  filter: grayscale(0);
+  transition: all 0.3s ease-in-out;
+}
+.review-container .further-links .link-img a img:hover {
+  filter: grayscale(100%);
+}
+.review-container .further-links .link-img a:last-child img {
+  max-width: 180px;
+  margin-left: 80px;
+}
+
 #profile {
   background-color: #FAFAFC;
   margin: 20px 0;
@@ -1278,6 +1370,24 @@ input[type=number] {
     width: 75%;
     margin: auto;
   }
+  .review-container {
+    padding: 50px 0;
+  }
+  .review-container .review-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .review-container .review-heading h1 {
+    font-weight: 500;
+    font-size: 42px;
+  }
+  .review-container .reviews-body .review-border-color .review .top .name {
+    font-size: 20px;
+  }
+  .review-container .reviews-body .review-border-color:last-child {
+    width: 205%;
+    margin: auto;
+  }
   #profile {
     background-color: #FAFAFC;
     margin: 20px 0;
@@ -1460,6 +1570,26 @@ input[type=number] {
     height: 400px;
   }
 }
+@media only screen and (max-width: 1300px) and (max-width: 800px) {
+  .review-container {
+    padding: 50px 0 40px 0;
+  }
+  .review-container .review-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .review-container .review-heading h1 {
+    font-weight: 500;
+    font-size: 38px;
+  }
+  .review-container .reviews-body .review-border-color .review .top .name {
+    font-size: 20px;
+  }
+  .review-container .reviews-body .review-border-color:last-child {
+    width: 100%;
+    margin: auto;
+  }
+}
 @media only screen and (max-width: 1300px) and (max-width: 700px) {
   #main {
     height: 40vh !important;
@@ -1636,6 +1766,24 @@ input[type=number] {
   }
   #services .services-container .service-col .card {
     max-width: 70%;
+  }
+  .review-container {
+    padding: 50px 0 40px 0;
+  }
+  .review-container .review-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .review-container .review-heading h1 {
+    font-weight: 500;
+    font-size: 35px;
+  }
+  .review-container .reviews-body .review-border-color .review .top .name {
+    font-size: 20px;
+  }
+  .review-container .reviews-body .review-border-color:last-child {
+    width: 100%;
+    margin: auto;
   }
   #about .about-container .about-head h1 {
     font-size: 23px;

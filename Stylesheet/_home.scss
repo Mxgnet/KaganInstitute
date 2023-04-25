@@ -304,6 +304,121 @@
     }
 }
 
+// ************ REVIEW SECTION STYLING
+.review-container {
+    padding: 50px 0;
+
+    .review-heading {
+        text-align: center;
+        margin-bottom: 20px;
+
+        h1 {
+            font-weight: 500;
+            @include heading(42px)
+        }
+    }
+
+    .reviews-body {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(345px, auto));
+        padding-top: 30px;
+        column-gap: 25px;
+        row-gap: 25px;
+
+        .review-border-color {
+            padding: 1rem;
+            position: relative;
+            background: linear-gradient(180deg, #1338B0 0%, #0097FF 100%);
+            padding: 1px;
+            border-radius: 9px;
+
+            .review {
+                background: #fff;
+                padding: 0rem 2rem;
+                border-radius: 8px;
+
+                .top {
+                    padding: 25px 0 15px 0;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+
+                    .name {
+                        font-weight: 500;
+                        @include paragraph(22px);
+                    }
+
+                    .ratings {
+                        margin: 0 20px;
+
+                        svg {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .read-btn {
+                    padding: 15px 0 25px 0;
+
+                    a {
+                        color: #000;
+                        font-weight: 400;
+                        font-size: 16px;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .further-links {
+        text-align: center;
+        padding: 40px 0 0 0;
+
+
+        h2 {
+            font-weight: 500;
+            @include sub-heading(25px);
+            margin-bottom: 30px;
+        }
+
+        .link-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            a {
+                display: inline-flex;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    max-width: 100px;
+                    filter: grayscale(0);
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        filter: grayscale(100%);
+                    }
+                }
+            }
+
+            a:last-child {
+                img {
+                    max-width: 180px;
+                    margin-left: 80px;
+                }
+            }
+        }
+    }
+}
+
 // ************** PROFILE SECTION ****************//
 #profile {
     background-color: #FAFAFC;
@@ -434,7 +549,7 @@
     margin-bottom: 100px;
 
     .appoint-form {
-        background: linear-gradient(0deg, rgba(19,56,176,1) 0%, rgba(0,151,255,1) 100%);
+        background: linear-gradient(0deg, rgba(19, 56, 176, 1) 0%, rgba(0, 151, 255, 1) 100%);
         box-shadow: 0px 4px 57px rgba(0, 0, 0, 0.07);
         border-radius: 17px;
         width: 100%;
@@ -735,6 +850,39 @@
             }
         }
 
+        // ******** REVIEWS SECTION STYLING **********//
+
+        .review-container {
+            padding: 50px 0;
+
+            .review-heading {
+                text-align: center;
+                margin-bottom: 20px;
+
+                h1 {
+                    font-weight: 500;
+                    @include heading(42px)
+                }
+            }
+
+            .reviews-body {
+                .review-border-color {
+                    .review {
+                        .top {
+                            .name {
+                                @include paragraph(20px);
+                            }
+                        }
+                    }
+                }
+
+                .review-border-color:last-child {
+                    width: 205%;
+                    margin: auto;
+                }
+            }
+        }
+
         // ********** PROFILE SECTIOM ****************//
         #profile {
             background-color: #FAFAFC;
@@ -997,6 +1145,40 @@
         }
     }
 
+    @media only screen and (max-width:800px) {
+        // ******** REVIEWS SECTION STYLING **********//
+
+        .review-container {
+            padding: 50px 0 40px 0;
+
+            .review-heading {
+                text-align: center;
+                margin-bottom: 20px;
+
+                h1 {
+                    font-weight: 500;
+                    @include heading(38px)
+                }
+            }
+
+            .reviews-body {
+                .review-border-color {
+                    .review {
+                        .top {
+                            .name {
+                                @include paragraph(20px);
+                            }
+                        }
+                    }
+                }
+
+                .review-border-color:last-child {
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+        }
+    }
 
     @media only screen and (max-width: 700px) {
 
@@ -1302,6 +1484,39 @@
             }
         }
 
+        // ******** REVIEWS SECTION STYLING **********//
+
+        .review-container {
+            padding: 50px 0 40px 0;
+
+            .review-heading {
+                text-align: center;
+                margin-bottom: 20px;
+
+                h1 {
+                    font-weight: 500;
+                    @include heading(35px)
+                }
+            }
+
+            .reviews-body {
+                .review-border-color {
+                    .review {
+                        .top {
+                            .name {
+                                @include paragraph(20px);
+                            }
+                        }
+                    }
+                }
+
+                .review-border-color:last-child {
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+        }
+
         // ********** ABOUT SECTION **************//
         #about {
             .about-container {
@@ -1445,7 +1660,7 @@
 
         // ********** APOINTMENT FORM 2
         .appointment-form-container {
-            background: linear-gradient(0deg, rgba(19,56,176,1) 0%, rgba(0,151,255,1) 100%);
+            background: linear-gradient(0deg, rgba(19, 56, 176, 1) 0%, rgba(0, 151, 255, 1) 100%);
             width: 95%;
             margin: auto;
 
