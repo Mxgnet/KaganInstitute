@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container-width {
+    @include container-width;
+}
+
+.inner-container {
+    @include inner-container;
+}
+
+p {
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 29;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+input[type=number] {
+    -webkit-appearance: textfield;
+}
+
+@import 'form-popup';
+@import "header";
+@import "dropdown";
+@import "home";
+@import "blog";
+@import "procedure";
+@import "footer";

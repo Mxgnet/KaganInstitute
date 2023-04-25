@@ -1,0 +1,226 @@
+// ******************* DropDown Styling of Navbar *************************** //
+
+.header {
+    .navbar {
+        .nav-container {
+            .list-items {
+
+                // ************* DROPDOWN OF BLOG SECTION ************** //
+                .dropdown-links {
+                    position: relative;
+
+                    &:hover .dropdown {
+                        transform: scaleY(1);
+                        transform-origin: top;
+                    }
+
+                    .dropdown {
+                        position: absolute;
+                        background-color: #fff;
+                        // border: 1px solid #E0E0E0;
+                        box-shadow: 0px 0px 10px 0px #07070710;
+                        top: 30px;
+                        left: 10px;
+                        transform: scaleY(0);
+                        z-index: 10;
+                        transform-origin: top;
+                        width: 120px;
+                        transition: all 0.3s ease-in;
+
+                        a {
+                            color: #0A0A0A;
+                            text-decoration: none;
+                            margin: 0;
+
+                            &.sub-selected {
+                                color: #0632AD;
+                            }
+
+                            .dropdown-link {
+                                list-style-type: none;
+                                font-weight: 400;
+                                font-size: 13px;
+                                padding: 10px 10px 10px 10px;
+                                border-bottom: 1px solid #cccccc;
+                                transition: all 0.2s ease-in-out;
+
+                                &:hover {
+                                    background-color: #0632AD;
+                                }
+                            }
+
+                            &:hover {
+                                color: #fff;
+                            }
+
+                            #last-link {
+                                border-bottom: 0;
+                                padding-bottom: 15px;
+                            }
+                        }
+                    }
+
+                    #aesthetics-dropdown {
+                        width: 250px;
+
+                        #inner-hover:hover #inner-dropdown {
+                            transform: scaleY(1);
+                        }
+
+                        #inner-hover2:hover #inner-dropdown2 {
+                            transform: scaleY(1);
+                        }
+
+                        #inner-dropdown {
+                            left: -240px;
+                            top: 0;
+                            width: 240px;
+                            transform: scaleY(0);
+                        }
+
+                        #inner-dropdown2 {
+                            left: -170px;
+                            top: 0;
+                            width: 170px;
+                            transform: scaleY(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:1000px) {
+
+    .header {
+        .navbar {
+            .nav-container {
+                .list-items {
+
+                    // ************* DROPDOWN OF BLOG SECTION ************** //
+                    .dropdown-links {
+                        position: relative;
+
+                        &:focus-within .dropdown {
+                            transform: scaleY(1);
+                            transform-origin: top;
+                        }
+
+                        .dropdown {
+                            position: absolute;
+                            background-color: #fff;
+                            // border: 1px solid #E0E0E0;
+                            box-shadow: 0px 0px 10px 0px #07070710;
+                            top: 50px;
+                            left: 25px;
+                            transform: scaleY(0);
+                            z-index: 10;
+                            transform-origin: top;
+                            width: 120px;
+                            transition: all 0.3s ease-in;
+
+                            a {
+                                color: #0A0A0A;
+                                text-decoration: none;
+                                margin: 0;
+
+                                &.sub-selected {
+                                    color: #0632AD;
+                                }
+
+                                .dropdown-link {
+                                    list-style-type: none;
+                                    font-weight: 400;
+                                    font-size: 13px;
+                                    padding: 10px 10px 10px 10px;
+                                    text-transform: capitalize;
+                                    border-bottom: 1px solid #cccccc;
+                                    transition: all 0.2s ease-in-out;
+
+                                    &:hover {
+                                        background-color: #0632AD;
+                                    }
+                                }
+
+                                &:hover {
+                                    color: #fff;
+                                }
+
+                                #last-link {
+                                    border-bottom: 0;
+                                    padding-bottom: 15px;
+                                }
+                            }
+                        }
+
+                        #aesthetics-dropdown {
+                            width: 250px;
+
+                            #inner-hover:focus-within #inner-dropdown {
+                                transform: scaleY(1);
+                            }
+
+                            #inner-hover2:focus-within #inner-dropdown2 {
+                                transform: scaleY(1);
+                            }
+
+                            #inner-dropdown {
+                                left: 20px;
+                                top: 35px;
+                                width: 240px;
+                                transform: scaleY(0);
+                            }
+
+                            #inner-dropdown2 {
+                                left: 20px;
+                                top: 35px;
+                                width: 170px;
+                                transform: scaleY(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:500px) {
+
+    .header {
+        .navbar {
+            .nav-container {
+                .list-items {
+
+                    // ************* DROPDOWN OF BLOG SECTION ************** //
+                    .dropdown-links {
+                        .dropdown {
+                            top: 45px;
+                            left: 15px;
+                        }
+
+                        #aesthetics-dropdown {
+                            width: 200px;
+
+                            #inner-dropdown {
+                                left: 20px;
+                                top: 35px;
+                                width: 210px;
+                                transform: scaleY(0);
+                            }
+
+                            #inner-dropdown2 {
+                                left: 20px;
+                                top: 35px;
+                                width: 150px;
+                                transform: scaleY(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
