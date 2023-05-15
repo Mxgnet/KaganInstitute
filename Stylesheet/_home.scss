@@ -154,6 +154,7 @@
             h1 {
                 font-weight: 600;
                 @include heading(35px);
+                margin-bottom: 20px;
             }
 
             p {
@@ -359,16 +360,29 @@
                     }
                 }
 
+                .description {
+                    p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        /* number of lines to show */
+                        line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+
                 .read-btn {
                     padding: 15px 0 25px 0;
 
                     a {
                         color: #000;
-                        font-weight: 400;
+                        font-weight: 500;
                         font-size: 16px;
+                        text-decoration: underline;
 
                         &:hover {
-                            text-decoration: underline;
+                            text-decoration: none;
                         }
                     }
                 }
@@ -744,933 +758,1041 @@
                 grid-template-columns: repeat(auto-fit, minmax(250px, auto));
             }
         }
-
-        // ********** ABOUT SECTION **************//
-        #about {
-            .about-container {
-                .about-head {
-                    h1 {
-                        font-size: 38px;
-
-                    }
-
-                    p {
-                        @include sub-paragraph(16px);
-                    }
-                }
-
-                .about-row {
-                    .about-col {
-                        padding: 0 0 20px 0;
-
-                        .content {
-                            p {
-                                font-size: 16px;
-                                width: 95%;
-                                margin: auto;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 
-    @media only screen and (max-width:1100px) {
+    // ******** REVIEWS SECTION STYLING **********//
 
-        // ************* MAIN SECTION ***************//
-        #main {
-            height: 55vh !important;
+    .review-container {
+        padding: 50px 0;
 
-            .main-container {
-                .main-inner {
-                    .small {
-                        @include sub-paragraph(24px);
-                    }
-
-                    .large {
-                        @include heading(45px);
-                    }
-
-                    .paragraph {
-                        @include paragraph(16px);
-                    }
-                }
-            }
-        }
-
-        // ********** ABOUT SECTION **************//
-        #about {
-            .about-container {
-                .about-head {
-                    h1 {
-                        font-size: 38px;
-
-                    }
-
-                    p {
-                        @include sub-paragraph(16px);
-                    }
-                }
-
-                #mobile-col {
-                    display: block;
-
-                    .about-col {
-                        padding: 0 0 20px 0;
-
-                        .content {
-                            p {
-                                font-size: 16px;
-                                width: 55%;
-                                margin: auto;
-                            }
-                        }
-                    }
-
-                }
-
-                .about-row {
-                    .about-col-3 {
-                        display: none;
-                    }
-
-                    .about-col {
-                        padding: 0 0 20px 0;
-
-                        .content {
-                            p {
-                                font-size: 16px;
-                                width: 75%;
-                                margin: auto;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        // ******** REVIEWS SECTION STYLING **********//
-
-        .review-container {
-            padding: 50px 0;
-
-            .review-heading {
-                text-align: center;
-                margin-bottom: 20px;
-
-                h1 {
-                    font-weight: 500;
-                    @include heading(42px)
-                }
-            }
-
-            .reviews-body {
-                .review-border-color {
-                    .review {
-                        .top {
-                            .name {
-                                @include paragraph(20px);
-                            }
-                        }
-                    }
-                }
-
-                .review-border-color:last-child {
-                    width: 205%;
-                    margin: auto;
-                }
-            }
-        }
-
-        // ********** PROFILE SECTIOM ****************//
-        #profile {
-            background-color: #FAFAFC;
-            margin: 20px 0;
-
-            .profile-container {
-                margin-right: 0;
-
-                .profile-img {
-                    display: inline-block;
-
-                    img {
-                        width: 100%;
-                        max-width: 420px;
-                        pointer-events: none;
-                        user-select: none;
-                    }
-                }
-
-                .profile-context {
-                    padding: 10px 0 10px 45px;
-
-                    .head {
-                        font-weight: 600;
-                        @include heading(40px);
-                        text-transform: uppercase;
-                        color: $primary-color;
-                    }
-
-                    .qualifi {
-                        font-style: normal;
-                        font-weight: 400;
-                        @include sub-paragraph(22px);
-                        width: 70%;
-                        color: #1F1D1D;
-                        padding: 10px 0 10px 0;
-                    }
-
-                    .expert li {
-                        padding: 2px 5px;
-                        font-weight: 300;
-                        font-size: 15px;
-                        color: #505050;
-                    }
-                }
-
-            }
-        }
-
-        // ********** APOINTMENT FORM 2
-        .appointment-form-container {
-            width: 95%;
-            margin: auto;
-
-            .appoint-form {
-                .apointmentform-body {
-                    .input-row {
-                        .input-field {
-                            textarea {
-                                padding: 0 10px 15px 15px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    @media only screen and (max-width:1000px) {
-
-        // ************* MAIN SECTION ***************//
-        #main {
-            height: 45vh !important;
-
-            .main-container {
-                .main-inner {
-                    margin-top: 0;
-
-                    .small {
-                        @include sub-paragraph(17px);
-                    }
-
-                    .large {
-                        padding: 6px 20px;
-                        @include heading(45px);
-                    }
-
-                    .paragraph {
-                        width: 60%;
-                        @include paragraph(17px);
-                    }
-                }
-            }
-        }
-
-        // ******** APPOINTMENT FORM ********//
-        #appointment-form {
-            display: none;
-        }
-
-        // ********* SERVICES SECTION ****************//
-        .background-body {
-            margin: 0;
-        }
-
-        #services {
-            padding-top: 25px;
-        }
-
-
-        // ********** ABOUT SECTION **************//
-        #about {
-            padding-bottom: 20px;
-
-            .about-container {
-                .about-head {
-                    h1 {
-                        font-size: 35px;
-
-                    }
-
-                    p {
-                        @include sub-paragraph(15px);
-                    }
-                }
-
-                .about-row {
-                    .about-col-3 {
-                        display: none;
-                    }
-
-                    .about-col {
-                        padding: 0 0 20px 0;
-
-                        .content {
-                            h2 {
-                                @include sub-heading(17px);
-                            }
-
-                            p {
-                                font-size: 16px;
-                                width: 75%;
-                                margin: auto;
-                            }
-                        }
-                    }
-                }
-
-                #mobile-col {
-                    display: block;
-
-                    .about-col {
-                        padding: 0 0 20px 0;
-
-                        .content {
-                            h2 {
-                                @include sub-heading(17px);
-                            }
-
-                            p {
-                                font-size: 16px;
-                                width: 55%;
-                                margin: auto;
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-
-        // ********** PROFILE SECTIOM ****************//
-        #profile {
-            background-color: #FAFAFC;
-            margin: 20px 0;
-
-            .profile-container {
-                flex-wrap: wrap;
-                padding: 20px 0;
-
-                .mobile {
-                    display: block;
-                    text-align: center;
-
-                    .head {
-                        display: block !important;
-                    }
-
-                    .qualifi {
-                        display: block !important;
-                        margin: auto;
-                    }
-                }
-
-                .profile-img {
-                    display: inline-block;
-
-                    img {
-                        width: 100%;
-                        max-width: 370px;
-                        pointer-events: none;
-                        user-select: none;
-                    }
-                }
-
-                .profile-context {
-                    padding: 10px 0 10px 0px;
-
-                    .head {
-                        display: none;
-                    }
-
-                    .qualifi {
-                        display: none;
-                    }
-
-                    .expert li {
-                        padding: 2px 5px;
-                        font-weight: 300;
-                        font-size: 15px;
-                        color: #505050;
-                    }
-                }
-
-            }
-        }
-
-        /************* CAROUSAL SECTION *****************/
-        .carousal-head {
-            padding: 10px 0 10px 0;
+        .review-heading {
+            text-align: center;
+            margin-bottom: 20px;
 
             h1 {
-                font-weight: 600;
-                @include heading(35px);
-                text-transform: capitalize;
-            }
-
-            p {
-                padding-top: 15px;
+                font-weight: 500;
+                @include heading(38px)
             }
         }
 
-        .swiper {
-            width: 100%;
-            padding-bottom: 50px;
+        .reviews-body {
+            .review-border-color {
+                .review {
+                    .top {
+                        .name {
+                            @include paragraph(20px);
+                        }
 
-            .swiper-wrapper {
+                    }
 
-                .video {
-                    width: 35em !important;
-
-                    iframe {
-                        width: 100%;
-                        height: 400px;
-
+                    .description {
+                        p {
+                            width: 100%;
+                            white-space: normal;
+                            overflow: visible;
+                            text-overflow: ellipsis;
+                            font-size: 16px;
+                        }
                     }
                 }
             }
         }
     }
 
-    @media only screen and (max-width:800px) {
-        // ******** REVIEWS SECTION STYLING **********//
-
-        .review-container {
-            padding: 50px 0 40px 0;
-
-            .review-heading {
-                text-align: center;
-                margin-bottom: 20px;
-
+    // ********** ABOUT SECTION **************//
+    #about {
+        .about-container {
+            .about-head {
                 h1 {
-                    font-weight: 500;
-                    @include heading(38px)
+                    font-size: 38px;
+
+                }
+
+                p {
+                    @include sub-paragraph(16px);
                 }
             }
 
-            .reviews-body {
-                .review-border-color {
-                    .review {
-                        .top {
-                            .name {
-                                @include paragraph(20px);
-                            }
+            .about-row {
+                .about-col {
+                    padding: 0 0 20px 0;
+
+                    .content {
+                        p {
+                            font-size: 16px;
+                            width: 95%;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1100px) {
+
+    // ************* MAIN SECTION ***************//
+    #main {
+        height: 55vh !important;
+
+        .main-container {
+            .main-inner {
+                .small {
+                    @include sub-paragraph(24px);
+                }
+
+                .large {
+                    @include heading(45px);
+                }
+
+                .paragraph {
+                    @include paragraph(16px);
+                }
+            }
+        }
+    }
+
+    // ********** ABOUT SECTION **************//
+    #about {
+        .about-container {
+            .about-head {
+                h1 {
+                    font-size: 38px;
+
+                }
+
+                p {
+                    @include sub-paragraph(16px);
+                }
+            }
+
+            #mobile-col {
+                display: block;
+
+                .about-col {
+                    padding: 0 0 20px 0;
+
+                    .content {
+                        p {
+                            font-size: 16px;
+                            width: 55%;
+                            margin: auto;
                         }
                     }
                 }
 
-                .review-border-color:last-child {
+            }
+
+            .about-row {
+                .about-col-3 {
+                    display: none;
+                }
+
+                .about-col {
+                    padding: 0 0 20px 0;
+
+                    .content {
+                        p {
+                            font-size: 16px;
+                            width: 75%;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // ******** REVIEWS SECTION STYLING **********//
+
+    .review-container {
+        padding: 50px 0;
+
+        .review-heading {
+            text-align: center;
+            margin-bottom: 20px;
+
+            h1 {
+                font-weight: 500;
+                @include heading(36px)
+            }
+        }
+
+        .reviews-body {
+            .review-border-color {
+                .review {
+                    .top {
+                        .name {
+                            @include paragraph(18px);
+                        }
+                    }
+                }
+
+                .description {
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .review-border-color:last-child {
+                width: 205%;
+                margin: auto;
+            }
+        }
+    }
+
+    // ********** PROFILE SECTIOM ****************//
+    #profile {
+        background-color: #FAFAFC;
+        margin: 20px 0;
+
+        .profile-container {
+            margin-right: 0;
+
+            .profile-img {
+                display: inline-block;
+
+                img {
                     width: 100%;
+                    max-width: 420px;
+                    pointer-events: none;
+                    user-select: none;
+                }
+            }
+
+            .profile-context {
+                padding: 10px 0 10px 45px;
+
+                .head {
+                    font-weight: 600;
+                    @include heading(40px);
+                    text-transform: uppercase;
+                    color: $primary-color;
+                }
+
+                .qualifi {
+                    font-style: normal;
+                    font-weight: 400;
+                    @include sub-paragraph(22px);
+                    width: 70%;
+                    color: #1F1D1D;
+                    padding: 10px 0 10px 0;
+                }
+
+                .expert li {
+                    padding: 2px 5px;
+                    font-weight: 300;
+                    font-size: 15px;
+                    color: #505050;
+                }
+            }
+
+        }
+    }
+
+    // ********** APOINTMENT FORM 2
+    .appointment-form-container {
+        width: 95%;
+        margin: auto;
+
+        .appoint-form {
+            .apointmentform-body {
+                .input-row {
+                    .input-field {
+                        textarea {
+                            padding: 0 10px 15px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:1000px) {
+
+    // ************* MAIN SECTION ***************//
+    #main {
+        height: 45vh !important;
+
+        .main-container {
+            .main-inner {
+                margin-top: 0;
+
+                .small {
+                    @include sub-paragraph(17px);
+                }
+
+                .large {
+                    padding: 6px 20px;
+                    @include heading(45px);
+                }
+
+                .paragraph {
+                    width: 60%;
+                    @include paragraph(17px);
+                }
+            }
+        }
+    }
+
+    // ******** APPOINTMENT FORM ********//
+    #appointment-form {
+        display: none;
+    }
+
+    // ********* SERVICES SECTION ****************//
+    .background-body {
+        margin: 0;
+    }
+
+    #services {
+        padding-top: 25px;
+    }
+
+
+    // ********** ABOUT SECTION **************//
+    #about {
+        padding-bottom: 20px;
+
+        .about-container {
+            .about-head {
+                h1 {
+                    font-size: 35px;
+
+                }
+
+                p {
+                    @include sub-paragraph(15px);
+                }
+            }
+
+            .about-row {
+                .about-col-3 {
+                    display: none;
+                }
+
+                .about-col {
+                    padding: 0 0 20px 0;
+
+                    .content {
+                        h2 {
+                            @include sub-heading(17px);
+                        }
+
+                        p {
+                            font-size: 16px;
+                            width: 75%;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+
+            #mobile-col {
+                display: block;
+
+                .about-col {
+                    padding: 0 0 20px 0;
+
+                    .content {
+                        h2 {
+                            @include sub-heading(17px);
+                        }
+
+                        p {
+                            font-size: 16px;
+                            width: 55%;
+                            margin: auto;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    // ********** PROFILE SECTIOM ****************//
+    #profile {
+        background-color: #FAFAFC;
+        margin: 20px 0;
+
+        .profile-container {
+            flex-wrap: wrap;
+            padding: 20px 0;
+
+            .mobile {
+                display: block;
+                text-align: center;
+
+                .head {
+                    display: block !important;
+                }
+
+                .qualifi {
+                    display: block !important;
                     margin: auto;
                 }
             }
+
+            .profile-img {
+                display: inline-block;
+
+                img {
+                    width: 100%;
+                    max-width: 370px;
+                    pointer-events: none;
+                    user-select: none;
+                }
+            }
+
+            .profile-context {
+                padding: 10px 0 10px 0px;
+
+                .head {
+                    display: none;
+                }
+
+                .qualifi {
+                    display: none;
+                }
+
+                .expert li {
+                    padding: 2px 5px;
+                    font-weight: 300;
+                    font-size: 15px;
+                    color: #505050;
+                }
+            }
+
         }
     }
 
-    @media only screen and (max-width: 700px) {
+    /************* CAROUSAL SECTION *****************/
+    .carousal-head {
+        padding: 10px 0 10px 0;
 
-        // ********** MAIN SECTION *************//
-        #main {
-            height: 40vh !important;
+        h1 {
+            font-weight: 600;
+            @include heading(35px);
+            text-transform: capitalize;
+        }
 
-            .main-container {
-                text-align: center;
+        p {
+            padding-top: 15px;
+        }
+    }
 
-                .main-inner {
+    .swiper {
+        width: 100%;
+        padding-bottom: 50px;
 
-                    .small {
-                        @include sub-paragraph(17px);
-                        padding-bottom: 0;
-                    }
+        .swiper-wrapper {
 
-                    .large {
-                        @include heading(38px);
-                    }
+            .video {
+                width: 35em !important;
 
-                    .paragraph {
-                        width: 70%;
-                        @include paragraph(17px);
-                    }
+                iframe {
+                    width: 100%;
+                    height: 400px;
+
                 }
             }
         }
+    }
+}
 
-        // ********* SERVICES SECTION ****************//
-        #services {
-            .services-container {
-                .service-head {
-                    h1 {
-                        @include heading(30px);
-                    }
+@media only screen and (max-width:800px) {
+    // ******** REVIEWS SECTION STYLING **********//
 
-                    p {
-                        @include sub-paragraph(17px);
-                    }
-                }
+    .review-container {
+        padding: 50px 0 40px 0;
 
+        .review-heading {
+            text-align: center;
+            margin-bottom: 20px;
+
+            h1 {
+                font-weight: 500;
+                @include heading(35px)
             }
         }
 
-        // ********** ABOUT SECTION **************//
-        #about {
-            .about-container {
-                .about-head {
-                    h1 {
-                        font-size: 32px;
-
-                    }
-
-                    p {
-                        @include sub-paragraph(16px);
-                        width: 70%;
-                        margin: auto;
-                    }
-                }
-
-                .about-row {
-                    .about-col-3 {
-                        display: none;
-                    }
-
-                    .about-col {
-                        padding: 0 0 20px 0;
-
-                        .content {
-                            h2 {
-                                @include sub-heading(17px);
-                            }
-
-                            p {
-                                font-size: 16px;
-                                width: 85%;
-                                margin: auto;
-                            }
+        .reviews-body {
+            .review-border-color {
+                .review {
+                    .top {
+                        .name {
+                            @include paragraph(18px);
                         }
                     }
                 }
 
-                #mobile-col {
-                    display: block;
-
-                    .about-col {
-                        padding: 0 0 20px 0;
-
-                        .content {
-                            h2 {
-                                @include sub-heading(17px);
-                            }
-
-                            p {
-                                font-size: 16px;
-                                width: 65%;
-                                margin: auto;
-                            }
-                        }
+                .description {
+                    p {
+                        font-size: 15px;
                     }
+                }
+            }
+        }
+    }
+}
 
+@media only screen and (max-width: 700px) {
+
+    // ********** MAIN SECTION *************//
+    #main {
+        height: 40vh !important;
+
+        .main-container {
+            text-align: center;
+
+            .main-inner {
+
+                .small {
+                    @include sub-paragraph(17px);
+                    padding-bottom: 0;
                 }
 
-                .contact-btn {
+                .large {
+                    @include heading(38px);
+                }
+
+                .paragraph {
+                    width: 70%;
+                    @include paragraph(17px);
+                }
+            }
+        }
+    }
+
+    // ********* SERVICES SECTION ****************//
+    #services {
+        .services-container {
+            .service-head {
+                h1 {
+                    @include heading(30px);
+                }
+
+                p {
+                    @include sub-paragraph(17px);
+                }
+            }
+
+        }
+    }
+
+    // ******** REVIEWS SECTION STYLING **********//
+
+    .review-container {
+
+        .review-heading {
+            h1 {
+                @include heading(32px)
+            }
+        }
+
+        .reviews-body {
+            .review-border-color {
+                .description {
+                    p {
+                        font-size: 15px !important;
+                    }
+                }
+
+                .read-btn {
                     a {
-                        button {
-                            width: 180px;
-                            height: 52px;
-                            @include paragraph(15px);
-                        }
+                        font-size: 14px !important;
                     }
                 }
             }
+
+            .review-border-color:last-child {
+                width: 100%;
+                margin: auto;
+            }
         }
 
-        // ********** PROFILE SECTIOM ****************//
-        #profile {
-            background-color: #FAFAFC;
-            margin: 20px 0;
+        .further-links {
+            h2 {
+                font-size: 22px;
+                margin-bottom: 25px;
+            }
 
-            .profile-container {
-                flex-wrap: wrap;
-                padding: 20px 0;
-
-                .mobile {
-
-                    .head {
-                        display: block !important;
-                        @include heading(35px);
-                    }
-
-                    .qualifi {
-                        display: block !important;
-                        margin: auto;
-                        @include sub-paragraph(20px);
-
-                    }
-                }
-
-                .profile-img {
-
+            .link-img {
+                a {
                     img {
-                        max-width: 350px;
+
+                        max-width: 80px;
                     }
                 }
 
-                .profile-context {
-                    .expert {
-                        li {
-                            @include sub-paragraph(14px);
-                            margin-left: 30px;
-                            padding-top: 8px;
+                a:last-child img {
+                    max-width: 150px;
+                    margin-left: 80px;
+                }
+            }
+        }
+    }
+
+    // ********** ABOUT SECTION **************//
+    #about {
+        .about-container {
+            .about-head {
+                h1 {
+                    font-size: 32px;
+
+                }
+
+                p {
+                    @include sub-paragraph(16px);
+                    width: 70%;
+                    margin: auto;
+                }
+            }
+
+            .about-row {
+                .about-col-3 {
+                    display: none;
+                }
+
+                .about-col {
+                    padding: 0 0 20px 0;
+
+                    .content {
+                        h2 {
+                            @include sub-heading(17px);
+                        }
+
+                        p {
+                            font-size: 16px;
+                            width: 85%;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+
+            #mobile-col {
+                display: block;
+
+                .about-col {
+                    padding: 0 0 20px 0;
+
+                    .content {
+                        h2 {
+                            @include sub-heading(17px);
+                        }
+
+                        p {
+                            font-size: 16px;
+                            width: 65%;
+                            margin: auto;
                         }
                     }
                 }
 
             }
-        }
 
-        // ************ CAROUSAL SECTION **************//
-        .carousal-head {
-            padding: 10px 0 10px 0;
-        }
-
-        .carousal-head h1 {
-            @include heading(30px);
-        }
-
-        .swiper {
-            width: 100%;
-            padding-bottom: 50px;
-
-            .swiper-wrapper {
-
-                .video {
-                    width: 35em !important;
-
-                    iframe {
-                        width: 100%;
-                        height: 450px;
-
-                    }
-                }
-            }
-        }
-
-        // ********** APOINTMENT FORM 2
-        .appointment-form-container {
-            width: 95%;
-            margin: auto;
-
-            .appoint-form {
-                .form-head {
-                    h1 {
-                        font-size: 29px;
-                    }
-                }
-
-                .apointmentform-body {
-                    padding: 0px 0 20px 0;
-
-                    .input-row {
-                        padding: 20px 0 0 0;
-                        flex-direction: column;
-
-                        &:last-child {
-                            padding-top: 0;
-                        }
-
-                        .input-field {
-                            padding: 20px 0;
-
-                            &:focus-within .animation-left {
-                                width: 100%;
-
-                            }
-
-                            .animation-left {
-                                width: 0%;
-                                bottom: 20px;
-                                left: 0;
-                            }
-
-                            textarea {
-                                padding: 0 10px 15px 15px;
-                            }
-
-
-
-                        }
+            .contact-btn {
+                a {
+                    button {
+                        width: 180px;
+                        height: 52px;
+                        @include paragraph(15px);
                     }
                 }
             }
         }
     }
 
+    // ********** PROFILE SECTIOM ****************//
+    #profile {
+        background-color: #FAFAFC;
+        margin: 20px 0;
 
-    @media only screen and (max-width:500px) {
+        .profile-container {
+            flex-wrap: wrap;
+            padding: 20px 0;
 
-        // Main Section
-        #main {
-            height: 40vh !important;
+            .mobile {
 
-            .main-container {
-                text-align: center;
+                .head {
+                    display: block !important;
+                    @include heading(35px);
+                }
 
-                .main-inner {
-                    .small {
-                        @include sub-paragraph(18px);
-                        padding-bottom: 0px;
-                    }
+                .qualifi {
+                    display: block !important;
+                    margin: auto;
+                    @include sub-paragraph(20px);
 
-                    .large {
-                        @include heading(30px);
-                        padding: 6px 15px;
-                    }
+                }
+            }
 
-                    .paragraph {
-                        padding: 0 15px;
-                        width: 100%;
-                        @include paragraph(15px);
-                        font-weight: 400;
+            .profile-img {
 
+                img {
+                    max-width: 350px;
+                }
+            }
+
+            .profile-context {
+                .expert {
+                    li {
+                        @include sub-paragraph(14px);
+                        margin-left: 30px;
+                        padding-top: 8px;
                     }
                 }
             }
+
         }
+    }
 
-        // ******** APPOOINTMENT FORM **************//
-        .form-popup {
-            .form-popup-container {
-                padding: 20px 25px;
+    // ************ CAROUSAL SECTION **************//
+    .carousal-head {
+        padding: 10px 0 10px 0;
+    }
 
-                .form-head {
-                    h2 {
-                        font-size: 22px;
-                        font-weight: 600;
-                    }
-                }
-            }
-        }
+    .carousal-head h1 {
+        @include heading(30px);
+    }
 
-        // ********* SERVICES SECTION ****************//
-        #services {
-            .services-container {
-                .service-head {
-                    h1 {
-                        @include heading(24px);
-                    }
+    .swiper {
+        width: 100%;
+        padding-bottom: 50px;
 
-                    p {
-                        @include sub-paragraph(16px);
-                        padding: 10px 15px;
-                    }
-                }
+        .swiper-wrapper {
 
-                .service-col {
-                    .card {
-                        max-width: 70%;
-                    }
-                }
-            }
-        }
+            .video {
+                width: 35em !important;
 
-        // ******** REVIEWS SECTION STYLING **********//
-
-        .review-container {
-            padding: 50px 0 40px 0;
-
-            .review-heading {
-                text-align: center;
-                margin-bottom: 20px;
-
-                h1 {
-                    font-weight: 500;
-                    @include heading(35px)
-                }
-            }
-
-            .reviews-body {
-                .review-border-color {
-                    .review {
-                        .top {
-                            .name {
-                                @include paragraph(20px);
-                            }
-                        }
-                    }
-                }
-
-                .review-border-color:last-child {
+                iframe {
                     width: 100%;
+                    height: 450px;
+
+                }
+            }
+        }
+    }
+
+    // ********** APOINTMENT FORM 2
+    .appointment-form-container {
+        width: 95%;
+        margin: auto;
+
+        .appoint-form {
+            .form-head {
+                h1 {
+                    font-size: 29px;
+                }
+            }
+
+            .apointmentform-body {
+                padding: 0px 0 20px 0;
+
+                .input-row {
+                    padding: 20px 0 0 0;
+                    flex-direction: column;
+
+                    &:last-child {
+                        padding-top: 0;
+                    }
+
+                    .input-field {
+                        padding: 20px 0;
+
+                        &:focus-within .animation-left {
+                            width: 100%;
+
+                        }
+
+                        .animation-left {
+                            width: 0%;
+                            bottom: 20px;
+                            left: 0;
+                        }
+
+                        textarea {
+                            padding: 0 10px 15px 15px;
+                        }
+
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:500px) {
+
+    // Main Section
+    #main {
+        height: 40vh !important;
+
+        .main-container {
+            text-align: center;
+
+            .main-inner {
+                .small {
+                    @include sub-paragraph(18px);
+                    padding-bottom: 0px;
+                }
+
+                .large {
+                    @include heading(30px);
+                    padding: 6px 15px;
+                }
+
+                .paragraph {
+                    padding: 0 15px;
+                    width: 100%;
+                    @include paragraph(15px);
+                    font-weight: 400;
+
+                }
+            }
+        }
+    }
+
+    // ******** APPOOINTMENT FORM **************//
+    .form-popup {
+        .form-popup-container {
+            padding: 20px 25px;
+
+            .form-head {
+                h2 {
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    // ********* SERVICES SECTION ****************//
+    #services {
+        .services-container {
+            .service-head {
+                h1 {
+                    @include heading(24px);
+                }
+
+                p {
+                    @include sub-paragraph(16px);
+                    padding: 10px 15px;
+                }
+            }
+
+            .service-col {
+                .card {
+                    max-width: 70%;
+                }
+            }
+        }
+    }
+
+    // ******** REVIEWS SECTION STYLING **********//
+
+    .review-container {
+        .review-heading {
+            h1 {
+                @include heading(25px)
+            }
+        }
+
+        .reviews-body {
+            padding-top: 20px;
+
+            .review-border-color {
+                .description {
+                    p {
+                        font-size: 14px !important;
+                    }
+                }
+            }
+        }
+
+        .further-links {
+            h2 {
+                font-size: 20px;
+                margin-bottom: 25px;
+            }
+
+            .link-img {
+                a {
+                    img {
+
+                        max-width: 60px;
+                    }
+                }
+
+                a:last-child img {
+                    max-width: 130px;
+                    margin-left: 80px;
+                }
+            }
+        }
+    }
+
+    // ********** ABOUT SECTION **************//
+    #about {
+        .about-container {
+            .about-head {
+                h1 {
+                    font-size: 23px;
+                    padding: 0 8px
+                }
+
+                p {
+                    @include sub-paragraph(15px);
+                    width: 90%;
                     margin: auto;
                 }
             }
-        }
 
-        // ********** ABOUT SECTION **************//
-        #about {
-            .about-container {
-                .about-head {
-                    h1 {
-                        font-size: 23px;
-                        padding: 0 8px
-                    }
-
-                    p {
-                        @include sub-paragraph(15px);
-                        width: 90%;
-                        margin: auto;
-                    }
+            .about-row {
+                .about-col-3 {
+                    display: none;
                 }
 
-                .about-row {
-                    .about-col-3 {
-                        display: none;
-                    }
-
-                    .about-col {
-                        padding: 0 0 20px 0;
-
-                        img {
-                            width: 40px
-                        }
-
-                        .content {
-                            h2 {
-                                @include sub-heading(16px);
-                            }
-
-                            p {
-                                font-size: 14px;
-                                width: 95%;
-                                margin: auto;
-                            }
-                        }
-                    }
-                }
-
-                #mobile-col {
-                    display: block;
-
-                    .about-col {
-                        padding: 0 0 20px 0;
-
-                        img {
-                            width: 40px
-                        }
-
-                        .content {
-                            h2 {
-                                @include sub-heading(16px);
-                            }
-
-                            p {
-                                font-size: 14px;
-                                width: 95%;
-                                margin: auto;
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-
-        // ********** PROFILE SECTIOM ****************//
-        #profile {
-            background-color: #FAFAFC;
-            margin: 20px 0;
-
-            .profile-container {
-                flex-wrap: wrap;
-                padding: 20px 0;
-
-                .mobile {
-
-                    .head {
-                        display: block !important;
-                        @include heading(30px);
-                    }
-
-                    .qualifi {
-                        display: block !important;
-                        margin: auto;
-                        @include sub-paragraph(18px);
-                        width: 100%;
-                        padding: 10px 10px;
-
-                    }
-                }
-
-                .profile-img {
+                .about-col {
+                    padding: 0 0 20px 0;
 
                     img {
-                        max-width: 280px;
+                        width: 40px
+                    }
+
+                    .content {
+                        h2 {
+                            @include sub-heading(16px);
+                        }
+
+                        p {
+                            font-size: 14px;
+                            width: 95%;
+                            margin: auto;
+                        }
                     }
                 }
+            }
 
-                .profile-context {
-                    .expert li {
-                        @include sub-paragraph(14px);
-                        margin-left: 20px;
+            #mobile-col {
+                display: block;
+
+                .about-col {
+                    padding: 0 0 20px 0;
+
+                    img {
+                        width: 40px
+                    }
+
+                    .content {
+                        h2 {
+                            @include sub-heading(16px);
+                        }
+
+                        p {
+                            font-size: 14px;
+                            width: 95%;
+                            margin: auto;
+                        }
                     }
                 }
 
             }
         }
+    }
 
-        // ************ CAROUSAL SECTION **************//
-        .carousal-head {
-            padding: 10px 0 5px 0;
-        }
+    // ********** PROFILE SECTIOM ****************//
+    #profile {
+        background-color: #FAFAFC;
+        margin: 20px 0;
 
-        .carousal-head {
-            h1 {
-                @include heading(28px);
+        .profile-container {
+            flex-wrap: wrap;
+            padding: 20px 0;
+
+            .mobile {
+
+                .head {
+                    display: block !important;
+                    @include heading(30px);
+                }
+
+                .qualifi {
+                    display: block !important;
+                    margin: auto;
+                    @include sub-paragraph(18px);
+                    width: 100%;
+                    padding: 10px 10px;
+
+                }
             }
+
+            .profile-img {
+
+                img {
+                    max-width: 280px;
+                }
+            }
+
+            .profile-context {
+                .expert li {
+                    @include sub-paragraph(14px);
+                    margin-left: 20px;
+                }
+            }
+
         }
+    }
 
-        .swiper {
-            width: 100%;
-            padding-bottom: 50px;
+    // ************ CAROUSAL SECTION **************//
+    .carousal-head {
+        padding: 10px 0 5px 0;
+    }
 
-            .swiper-wrapper {
+    .carousal-head {
+        h1 {
+            @include heading(28px);
+        }
+    }
 
-                .video {
-                    width: 25em !important;
+    .swiper {
+        width: 100%;
+        padding-bottom: 50px;
 
-                    iframe {
-                        width: 90%;
-                        height: 267px;
+        .swiper-wrapper {
 
-                    }
+            .video {
+                width: 25em !important;
+
+                iframe {
+                    width: 90%;
+                    height: 267px;
+
                 }
             }
         }
+    }
 
-        // ********** APOINTMENT FORM 2
-        .appointment-form-container {
-            background: linear-gradient(0deg, rgba(19, 56, 176, 1) 0%, rgba(0, 151, 255, 1) 100%);
-            width: 95%;
-            margin: auto;
+    // ********** APOINTMENT FORM 2
+    .appointment-form-container {
+        background: linear-gradient(0deg, rgba(19, 56, 176, 1) 0%, rgba(0, 151, 255, 1) 100%);
+        width: 95%;
+        margin: auto;
 
-            .appoint-form {
-                .form-head {
-                    h1 {
-                        font-size: 23px !important;
-                    }
+        .appoint-form {
+            .form-head {
+                h1 {
+                    font-size: 23px !important;
                 }
-
             }
         }
     }

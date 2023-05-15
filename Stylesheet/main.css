@@ -53,6 +53,7 @@ a {
 
 input[type=number] {
   -webkit-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 .form-popup {
@@ -269,6 +270,7 @@ input[type=number] {
   color: #000000;
   text-decoration: none;
   margin: 0 5px;
+  padding: 10px 0;
   position: relative;
   font-size: 15px;
   text-transform: capitalize;
@@ -401,7 +403,7 @@ input[type=number] {
     position: relative;
   }
   .header .navbar .nav-container .list-items {
-    position: fixed !important;
+    position: fixed;
     background-color: aliceblue;
     width: 50%;
     flex-direction: column;
@@ -413,7 +415,6 @@ input[type=number] {
     justify-content: start;
     align-items: start;
     transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-    overflow: hidden;
     /* Drop-Down Styling */
   }
   .header .navbar .nav-container .list-items .logo {
@@ -431,7 +432,7 @@ input[type=number] {
     justify-content: start;
     align-items: start;
     padding-left: 30px;
-    padding: 20px;
+    padding: 15px 20px;
   }
   .header .navbar .nav-container .list-items li a {
     font-size: 14px;
@@ -503,9 +504,6 @@ input[type=number] {
     padding-right: 1px;
     margin-left: 0;
   }
-  .header .navbar {
-    overflow: hidden;
-  }
   .header .navbar .nav-container .list-items {
     width: 60%;
   }
@@ -537,7 +535,6 @@ input[type=number] {
   }
   .header .navbar {
     padding: 15px 0;
-    overflow: hidden;
   }
   .header .navbar .nav-container .logo img {
     max-width: 170px;
@@ -553,161 +550,169 @@ input[type=number] {
     max-width: 160px !important;
   }
 }
-.header .navbar .nav-container .list-items .dropdown-links {
+.header .navbar .nav-container .list-items li {
   position: relative;
 }
-.header .navbar .nav-container .list-items .dropdown-links:hover .dropdown {
-  transform: scaleY(1);
-  transform-origin: top;
+.header .navbar .nav-container .list-items li:hover > ul {
+  max-height: 100px;
 }
-.header .navbar .nav-container .list-items .dropdown-links .dropdown {
+.header .navbar .nav-container .list-items li:hover > .aesthetic-dropdown {
+  max-height: 185px;
+}
+.header .navbar .nav-container .list-items li:hover > .aesthetic-dropdown-inner {
+  max-height: 260px;
+}
+.header .navbar .nav-container .list-items li:hover > .aesthetic-dropdown-inner2 {
+  max-height: 120px;
+}
+.header .navbar .nav-container .list-items li:hover > .aesthetic-dropdown-inner3 {
+  max-height: 150px;
+}
+.header .navbar .nav-container .list-items li ul {
   position: absolute;
+  list-style: none;
   background-color: #fff;
+  width: 130px;
   box-shadow: 0px 0px 10px 0px rgba(7, 7, 7, 0.062745098);
-  top: 30px;
-  left: 10px;
-  transform: scaleY(0);
-  z-index: 10;
-  transform-origin: top;
-  width: 120px;
-  transition: all 0.3s ease-in;
+  left: 0px;
+  overflow: hidden;
+  margin-top: 10px;
+  max-height: 0;
+  transition: max-height 250ms ease-in;
 }
-.header .navbar .nav-container .list-items .dropdown-links .dropdown a {
-  color: #0A0A0A;
-  text-decoration: none;
+.header .navbar .nav-container .list-items li ul a {
   margin: 0;
-}
-.header .navbar .nav-container .list-items .dropdown-links .dropdown a.sub-selected {
-  color: #0632AD;
-}
-.header .navbar .nav-container .list-items .dropdown-links .dropdown a .dropdown-link {
-  list-style-type: none;
-  font-weight: 400;
+  width: 100%;
+  display: block;
   font-size: 13px;
-  padding: 10px 10px 10px 10px;
-  border-bottom: 1px solid #cccccc;
-  transition: all 0.2s ease-in-out;
+  width: 109%;
+  margin-left: -10px;
+  padding: 10px 15px;
+  top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease;
 }
-.header .navbar .nav-container .list-items .dropdown-links .dropdown a .dropdown-link:hover {
+.header .navbar .nav-container .list-items li ul a:hover {
+  color: #fff;
   background-color: #0632AD;
 }
-.header .navbar .nav-container .list-items .dropdown-links .dropdown a:hover {
-  color: #fff;
-}
-.header .navbar .nav-container .list-items .dropdown-links .dropdown a #last-link {
-  border-bottom: 0;
-  padding-bottom: 15px;
-}
-.header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown {
+.header .navbar .nav-container .list-items li .aesthetic-dropdown {
   width: 250px;
 }
-.header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown #inner-hover:hover #inner-dropdown {
-  transform: scaleY(1);
+.header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner {
+  left: -250px;
+  top: -10px;
+  width: 250px;
+  transition: max-height 500ms ease;
 }
-.header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown #inner-hover2:hover #inner-dropdown2 {
-  transform: scaleY(1);
+.header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner2 {
+  left: -130px;
+  top: -10px;
 }
-.header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown #inner-dropdown {
-  left: -240px;
-  top: 0;
-  width: 240px;
-  transform: scaleY(0);
+.header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner2 li a {
+  width: 119%;
+  margin-left: -10px;
 }
-.header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown #inner-dropdown2 {
-  left: -170px;
-  top: 0;
-  width: 170px;
-  transform: scaleY(0);
+.header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner3 {
+  left: -130px;
+  top: -10px;
+}
+.header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner3 li a {
+  width: 119%;
+  margin-left: -10px;
+}
+.header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner:hover {
+  overflow: visible;
+}
+.header .navbar .nav-container .list-items li .aesthetic-dropdown:hover {
+  overflow: visible;
 }
 
 @media only screen and (max-width: 1000px) {
-  .header .navbar .nav-container .list-items .dropdown-links {
+  .header .navbar .nav-container .list-items li {
     position: relative;
+    width: 100%;
   }
-  .header .navbar .nav-container .list-items .dropdown-links:focus-within .dropdown {
-    transform: scaleY(1);
-    transform-origin: top;
+  .header .navbar .nav-container .list-items li:focus-within > ul {
+    max-height: 200px;
   }
-  .header .navbar .nav-container .list-items .dropdown-links .dropdown {
-    position: absolute;
+  .header .navbar .nav-container .list-items li:focus-within > .aesthetic-dropdown {
+    max-height: 999px;
+  }
+  .header .navbar .nav-container .list-items li:focus-within > .aesthetic-dropdown-inner {
+    max-height: 999px;
+  }
+  .header .navbar .nav-container .list-items li:focus-within > .aesthetic-dropdown-inner2 {
+    max-height: 999px;
+  }
+  .header .navbar .nav-container .list-items li:focus-within > .aesthetic-dropdown-inner3 {
+    max-height: 999px;
+  }
+  .header .navbar .nav-container .list-items li ul {
+    position: static;
+    list-style: none;
     background-color: #fff;
+    width: 100%;
     box-shadow: 0px 0px 10px 0px rgba(7, 7, 7, 0.062745098);
-    top: 50px;
-    left: 25px;
-    transform: scaleY(0);
-    z-index: 10;
-    transform-origin: top;
-    width: 120px;
-    transition: all 0.3s ease-in;
+    left: 0px;
+    overflow: hidden;
+    margin-top: 10px;
+    max-height: 0;
+    transition: max-height 250ms ease-in;
   }
-  .header .navbar .nav-container .list-items .dropdown-links .dropdown a {
-    color: #0A0A0A;
-    text-decoration: none;
+  .header .navbar .nav-container .list-items li ul li {
+    padding: 5px 10px;
+  }
+  .header .navbar .nav-container .list-items li ul li a {
     margin: 0;
-  }
-  .header .navbar .nav-container .list-items .dropdown-links .dropdown a.sub-selected {
-    color: #0632AD;
-  }
-  .header .navbar .nav-container .list-items .dropdown-links .dropdown a .dropdown-link {
-    list-style-type: none;
-    font-weight: 400;
+    width: 100%;
+    display: block;
     font-size: 13px;
-    padding: 10px 10px 10px 10px;
-    text-transform: capitalize;
-    border-bottom: 1px solid #cccccc;
-    transition: all 0.2s ease-in-out;
+    width: 105%;
+    margin-left: -10px;
+    top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease;
   }
-  .header .navbar .nav-container .list-items .dropdown-links .dropdown a .dropdown-link:hover {
+  .header .navbar .nav-container .list-items li ul li a:hover {
+    color: #fff;
     background-color: #0632AD;
   }
-  .header .navbar .nav-container .list-items .dropdown-links .dropdown a:hover {
-    color: #fff;
+  .header .navbar .nav-container .list-items li .aesthetic-dropdown {
+    width: 100%;
   }
-  .header .navbar .nav-container .list-items .dropdown-links .dropdown a #last-link {
-    border-bottom: 0;
-    padding-bottom: 15px;
+  .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner {
+    margin-top: 0px;
+    margin-left: -10px;
+    width: 107%;
+    transition: max-height 500ms ease;
   }
-  .header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown {
-    width: 250px;
+  .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner2 {
+    margin-left: -10px;
+    width: 107%;
+    margin-top: 0;
   }
-  .header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown #inner-hover:focus-within #inner-dropdown {
-    transform: scaleY(1);
+  .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner2 li {
+    padding: 5px 15px;
   }
-  .header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown #inner-hover2:focus-within #inner-dropdown2 {
-    transform: scaleY(1);
+  .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner2 li a {
+    width: 105%;
+    margin-left: -10px;
   }
-  .header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown #inner-dropdown {
-    left: 20px;
-    top: 35px;
-    width: 240px;
-    transform: scaleY(0);
+  .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner3 {
+    margin-left: -10px;
+    width: 107%;
+    margin-top: 0;
   }
-  .header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown #inner-dropdown2 {
-    left: 20px;
-    top: 35px;
-    width: 170px;
-    transform: scaleY(0);
+  .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner3 li a {
+    width: 100%;
+    margin-left: 0;
   }
-}
-@media only screen and (max-width: 500px) {
-  .header .navbar .nav-container .list-items .dropdown-links .dropdown {
-    top: 45px;
-    left: 15px;
+  .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner:focus-within {
+    overflow: visible;
   }
-  .header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown {
-    width: 200px;
-  }
-  .header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown #inner-dropdown {
-    left: 20px;
-    top: 35px;
-    width: 210px;
-    transform: scaleY(0);
-  }
-  .header .navbar .nav-container .list-items .dropdown-links #aesthetics-dropdown #inner-dropdown2 {
-    left: 20px;
-    top: 35px;
-    width: 150px;
-    transform: scaleY(0);
+  .header .navbar .nav-container .list-items li .aesthetic-dropdown:focus-within {
+    overflow: visible;
   }
 }
 #main {
@@ -848,6 +853,7 @@ input[type=number] {
 #services .services-container .service-head h1 {
   font-weight: 600;
   font-size: 35px;
+  margin-bottom: 20px;
 }
 #services .services-container .service-head p {
   padding: 10px 0 15px 0;
@@ -1012,16 +1018,26 @@ input[type=number] {
 .review-container .reviews-body .review-border-color .review .top .ratings svg {
   font-size: 18px;
 }
+.review-container .reviews-body .review-border-color .review .description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
 .review-container .reviews-body .review-border-color .review .read-btn {
   padding: 15px 0 25px 0;
 }
 .review-container .reviews-body .review-border-color .review .read-btn a {
   color: #000;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
+  text-decoration: underline;
 }
 .review-container .reviews-body .review-border-color .review .read-btn a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .review-container .further-links {
   text-align: center;
@@ -1314,22 +1330,43 @@ input[type=number] {
   #services .services-container .service-col {
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   }
-  #services #about .about-container .about-head h1 {
+  .review-container {
+    padding: 50px 0;
+  }
+  .review-container .review-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .review-container .review-heading h1 {
+    font-weight: 500;
     font-size: 38px;
   }
-  #services #about .about-container .about-head p {
+  .review-container .reviews-body .review-border-color .review .top .name {
+    font-size: 20px;
+  }
+  .review-container .reviews-body .review-border-color .review .description p {
+    width: 100%;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: ellipsis;
     font-size: 16px;
   }
-  #services #about .about-container .about-row .about-col {
+  #about .about-container .about-head h1 {
+    font-size: 38px;
+  }
+  #about .about-container .about-head p {
+    font-size: 16px;
+  }
+  #about .about-container .about-row .about-col {
     padding: 0 0 20px 0;
   }
-  #services #about .about-container .about-row .about-col .content p {
+  #about .about-container .about-row .about-col .content p {
     font-size: 16px;
     width: 95%;
     margin: auto;
   }
 }
-@media only screen and (max-width: 1300px) and (max-width: 1100px) {
+@media only screen and (max-width: 1100px) {
   #main {
     height: 55vh !important;
   }
@@ -1379,10 +1416,13 @@ input[type=number] {
   }
   .review-container .review-heading h1 {
     font-weight: 500;
-    font-size: 42px;
+    font-size: 36px;
   }
   .review-container .reviews-body .review-border-color .review .top .name {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .review-container .reviews-body .review-border-color .description p {
+    font-size: 15px;
   }
   .review-container .reviews-body .review-border-color:last-child {
     width: 205%;
@@ -1437,7 +1477,7 @@ input[type=number] {
     padding: 0 10px 15px 15px;
   }
 }
-@media only screen and (max-width: 1300px) and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   #main {
     height: 45vh !important;
   }
@@ -1570,7 +1610,7 @@ input[type=number] {
     height: 400px;
   }
 }
-@media only screen and (max-width: 1300px) and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .review-container {
     padding: 50px 0 40px 0;
   }
@@ -1580,17 +1620,16 @@ input[type=number] {
   }
   .review-container .review-heading h1 {
     font-weight: 500;
-    font-size: 38px;
+    font-size: 35px;
   }
   .review-container .reviews-body .review-border-color .review .top .name {
-    font-size: 20px;
+    font-size: 18px;
   }
-  .review-container .reviews-body .review-border-color:last-child {
-    width: 100%;
-    margin: auto;
+  .review-container .reviews-body .review-border-color .description p {
+    font-size: 15px;
   }
 }
-@media only screen and (max-width: 1300px) and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
   #main {
     height: 40vh !important;
   }
@@ -1613,6 +1652,30 @@ input[type=number] {
   }
   #services .services-container .service-head p {
     font-size: 17px;
+  }
+  .review-container .review-heading h1 {
+    font-size: 32px;
+  }
+  .review-container .reviews-body .review-border-color .description p {
+    font-size: 15px !important;
+  }
+  .review-container .reviews-body .review-border-color .read-btn a {
+    font-size: 14px !important;
+  }
+  .review-container .reviews-body .review-border-color:last-child {
+    width: 100%;
+    margin: auto;
+  }
+  .review-container .further-links h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+  .review-container .further-links .link-img a img {
+    max-width: 80px;
+  }
+  .review-container .further-links .link-img a:last-child img {
+    max-width: 150px;
+    margin-left: 80px;
   }
   #about .about-container .about-head h1 {
     font-size: 32px;
@@ -1729,7 +1792,7 @@ input[type=number] {
     padding: 0 10px 15px 15px;
   }
 }
-@media only screen and (max-width: 1300px) and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   #main {
     height: 40vh !important;
   }
@@ -1767,23 +1830,25 @@ input[type=number] {
   #services .services-container .service-col .card {
     max-width: 70%;
   }
-  .review-container {
-    padding: 50px 0 40px 0;
-  }
-  .review-container .review-heading {
-    text-align: center;
-    margin-bottom: 20px;
-  }
   .review-container .review-heading h1 {
-    font-weight: 500;
-    font-size: 35px;
+    font-size: 25px;
   }
-  .review-container .reviews-body .review-border-color .review .top .name {
+  .review-container .reviews-body {
+    padding-top: 20px;
+  }
+  .review-container .reviews-body .review-border-color .description p {
+    font-size: 14px !important;
+  }
+  .review-container .further-links h2 {
     font-size: 20px;
+    margin-bottom: 25px;
   }
-  .review-container .reviews-body .review-border-color:last-child {
-    width: 100%;
-    margin: auto;
+  .review-container .further-links .link-img a img {
+    max-width: 60px;
+  }
+  .review-container .further-links .link-img a:last-child img {
+    max-width: 130px;
+    margin-left: 80px;
   }
   #about .about-container .about-head h1 {
     font-size: 23px;
@@ -2664,6 +2729,332 @@ input[type=number] {
   }
   .procedure-section .procedure-inner-container .row .col-1 .procedure-head h1 {
     font-size: 20px !important;
+  }
+}
+.review-container .top-head {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.review-container .top-head .review-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.review-container .top-head .review-head h1 {
+  font-weight: 500;
+  font-size: 45px;
+  color: #000000;
+}
+.review-container .top-head .review-head svg {
+  font-size: 30px;
+  margin-right: 15px;
+}
+.review-container .top-head .review-para {
+  margin-bottom: 15px;
+}
+.review-container .top-head .review-para p {
+  font-size: 16px;
+  width: 100%;
+  max-width: 55%;
+  margin: auto;
+  font-weight: 400;
+  font-size: 16px;
+  color: #0A0A0A;
+}
+.review-container .top-head .review-btn {
+  margin: 25px 0;
+}
+.review-container .top-head .review-btn a button {
+  padding: 20px 30px;
+  width: 240px;
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  background-color: #0632AD;
+  border-radius: 10px;
+  transition: background-color 200ms ease-in-out;
+}
+.review-container .top-head .review-btn a button:hover {
+  background-color: #224ec7;
+}
+.review-container .review-box {
+  border: 1px solid #BDBDBD;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 807px;
+  margin: 50px auto;
+}
+.review-container .review-box .review-inner-box {
+  padding: 25px 0;
+  text-align: center;
+}
+.review-container .review-box .review-inner-box .head {
+  padding-bottom: 10px;
+}
+.review-container .review-box .review-inner-box .head h1 {
+  font-weight: 500;
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 8px;
+  padding-top: 10px;
+}
+.review-container .review-box .review-inner-box .head p {
+  font-size: 16px;
+}
+.review-container .review-box .review-inner-box .reviews .review-card {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: #FAFAFC;
+  border: 1px solid #E7E7E7;
+  border-radius: 15px;
+  justify-content: space-between;
+  width: 85%;
+  padding: 25px 30px;
+  margin: 20px auto;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .left-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .left-content .image {
+  margin-right: 18px;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .left-content .image img {
+  width: 100%;
+  max-width: 45px;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .left-content .descrip .office {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .left-content .descrip .total-reviews {
+  font-weight: 400;
+  font-size: 14px;
+  color: #5B5B5B;
+  padding: 2px 0;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .left-content .descrip .more-review-btn a {
+  font-weight: 400;
+  font-size: 15px;
+  color: #0632AD;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .right-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .right-content .rating p {
+  font-size: 16px;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .right-content .stars {
+  margin: 0 18px;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .right-content .stars svg {
+  color: #DA7C25;
+  font-size: 18px;
+}
+.review-container .review-box .review-inner-box .reviews .review-card .right-content .link img {
+  width: 100%;
+  max-width: 20px;
+  cursor: pointer;
+}
+.review-container .review-box .further-review-links {
+  text-align: center;
+}
+.review-container .review-box .further-review-links h1 {
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+.review-container .review-box .further-review-links .images {
+  padding-bottom: 30px;
+}
+.review-container .review-box .further-review-links .images a {
+  display: inline-flex;
+  justify-content: center;
+}
+.review-container .review-box .further-review-links .images a img {
+  width: 100%;
+  max-width: 120px;
+  filter: grayscale(0);
+  transition: all 0.3s ease-in-out;
+}
+.review-container .review-box .further-review-links .images a:last-child img {
+  max-width: 180px;
+  margin-left: 80px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .review-container .top-head .review-head h1 {
+    font-size: 40px;
+  }
+  .review-container .top-head .review-para p {
+    font-size: 15px;
+    max-width: 70%;
+  }
+  .review-container .top-head .review-btn a button {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .review-container {
+    padding: 30px 0 40px 0;
+  }
+  .review-container .top-head .review-head h1 {
+    font-size: 35px;
+  }
+  .review-container .top-head .review-head svg {
+    font-size: 28px;
+  }
+  .review-container .top-head .review-btn a button {
+    width: 230px;
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .review-container .top-head .review-head h1 {
+    font-size: 35px;
+  }
+  .review-container .top-head .review-head svg {
+    font-size: 28px;
+  }
+  .review-container .top-head .review-para p {
+    font-size: 14px;
+    max-width: 90%;
+  }
+  .review-container .top-head .review-btn a button {
+    width: 90%;
+    height: 60px;
+  }
+  .review-container .review-box {
+    border: none;
+    margin: 0px auto;
+  }
+  .review-container .review-box .review-inner-box .head h1 {
+    font-size: 26px;
+  }
+  .review-container .review-box .review-inner-box .head p {
+    font-size: 15px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card {
+    width: 90%;
+    padding: 25px 15px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .left-content .image {
+    margin-right: 15px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .left-content .image img {
+    max-width: 40px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .left-content .descrip .office {
+    font-size: 15px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .left-content .descrip .total-reviews {
+    font-size: 13px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .left-content .descrip .more-review-btn a {
+    font-size: 14px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .right-content .rating p {
+    font-size: 15px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .right-content .stars {
+    margin: 0 18px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .right-content .stars svg {
+    color: #DA7C25;
+    font-size: 16px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .right-content .link img {
+    max-width: 18px;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .review-container .top-head .review-head h1 {
+    font-size: 30px;
+  }
+  .review-container .top-head .review-head svg {
+    font-size: 25px;
+  }
+  .review-container .top-head .review-para p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  .review-container .review-box .review-inner-box .head {
+    padding-bottom: 8px;
+  }
+  .review-container .review-box .review-inner-box .head h1 {
+    font-size: 25px;
+    padding-top: 5px;
+  }
+  .review-container .review-box .review-inner-box .head p {
+    font-size: 15px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    background-color: #FAFAFC;
+    border: 1px solid #E7E7E7;
+    border-radius: 15px;
+    justify-content: space-between;
+    width: 90%;
+    padding: 25px 30px;
+    margin: 20px auto;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .left-content .image img {
+    max-width: 45px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .right-content {
+    padding-left: 3.5em;
+    padding-top: 10px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .right-content .rating p {
+    font-size: 16px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .right-content .stars {
+    margin: 0 18px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .right-content .stars svg {
+    color: #DA7C25;
+    font-size: 18px;
+  }
+  .review-container .review-box .review-inner-box .reviews .review-card .right-content .link img {
+    width: 100%;
+    max-width: 20px;
+    cursor: pointer;
+  }
+  .review-container .review-box .further-review-links {
+    text-align: center;
+  }
+  .review-container .review-box .further-review-links h1 {
+    font-size: 22px;
+  }
+  .review-container .review-box .further-review-links .images {
+    padding-bottom: 10px;
+  }
+  .review-container .review-box .further-review-links .images a img {
+    width: 100%;
+    max-width: 100px;
+    filter: grayscale(0);
+    transition: all 0.3s ease-in-out;
+  }
+  .review-container .review-box .further-review-links .images a:last-child img {
+    max-width: 160px;
+    margin-left: 50px;
   }
 }
 /************ Footer Styling ***************/

@@ -1,0 +1,10 @@
+.header .navbar .nav-container .list-items li {
+  position: relative;
+}
+
+.header .navbar .nav-container .list-items li ul {
+  position: absolute;
+  list-style: none;
+  background-color: #fff;
+  width: 130px;
+}

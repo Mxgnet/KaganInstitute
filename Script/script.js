@@ -34,5 +34,20 @@ PopupForm_Btn.onclick = function () {
             Opacity.classList.add('active');
         }
     }
-        
 }
+
+// function truncateText(selector, maxLength) {
+//     var element = document.querySelector(selector),
+//         truncated = element.innerText;
+
+//     if (truncated.length > maxLength) {
+//         truncated = truncated.substr(0, maxLength) + '...';
+//     }
+//     return truncated;
+// }
+
+// var descrip = document.querySelectorAll('.description p')
+
+// descrip.forEach((para) => {
+//     para.innerText = truncateText('.description p', 107);
+// })

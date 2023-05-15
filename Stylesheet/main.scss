@@ -51,6 +51,7 @@ a {
 
 input[type=number] {
     -webkit-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 @import 'form-popup';
@@ -59,4 +60,5 @@ input[type=number] {
 @import "home";
 @import "blog";
 @import "procedure";
+@import "review";
 @import "footer";
