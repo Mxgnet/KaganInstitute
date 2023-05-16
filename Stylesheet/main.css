@@ -269,7 +269,7 @@ input[type=number] {
 .header .navbar .nav-container .list-items a {
   color: #000000;
   text-decoration: none;
-  margin: 0 5px;
+  margin: 0 10px;
   padding: 10px 0;
   position: relative;
   font-size: 15px;
@@ -287,6 +287,13 @@ input[type=number] {
 }
 .header .navbar .nav-container .list-items a:hover {
   color: #0632AD;
+}
+.header .navbar .nav-container .list-items a #arrow {
+  font-size: 20px;
+  top: 11px;
+  position: absolute;
+  transform: rotate(180deg);
+  transition: transform 200ms ease;
 }
 .header .navbar .nav-container .list-items .nav-btn {
   padding-left: 10px;
@@ -414,6 +421,7 @@ input[type=number] {
     height: 100%;
     justify-content: start;
     align-items: start;
+    overflow-y: scroll;
     transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     /* Drop-Down Styling */
   }
@@ -436,6 +444,13 @@ input[type=number] {
   }
   .header .navbar .nav-container .list-items li a {
     font-size: 14px;
+  }
+  .header .navbar .nav-container .list-items li a #arrow {
+    font-size: 18px;
+    top: 10px;
+    position: absolute;
+    transform: rotate(180deg);
+    transition: transform 200ms ease;
   }
   .header .navbar .nav-container .list-items .remove {
     display: block;
@@ -549,24 +564,31 @@ input[type=number] {
     width: 100%;
     max-width: 160px !important;
   }
+  .header .navbar .nav-container .list-items .remove {
+    right: 16px;
+  }
 }
 .header .navbar .nav-container .list-items li {
   position: relative;
 }
 .header .navbar .nav-container .list-items li:hover > ul {
   max-height: 100px;
+  transition: max-height 250ms ease-out;
 }
 .header .navbar .nav-container .list-items li:hover > .aesthetic-dropdown {
   max-height: 185px;
 }
 .header .navbar .nav-container .list-items li:hover > .aesthetic-dropdown-inner {
   max-height: 260px;
+  transition: max-height 500ms ease;
 }
 .header .navbar .nav-container .list-items li:hover > .aesthetic-dropdown-inner2 {
   max-height: 120px;
+  transition: max-height 500ms ease;
 }
 .header .navbar .nav-container .list-items li:hover > .aesthetic-dropdown-inner3 {
   max-height: 150px;
+  transition: max-height 500ms ease;
 }
 .header .navbar .nav-container .list-items li ul {
   position: absolute;
@@ -578,7 +600,6 @@ input[type=number] {
   overflow: hidden;
   margin-top: 10px;
   max-height: 0;
-  transition: max-height 250ms ease-in;
 }
 .header .navbar .nav-container .list-items li ul a {
   margin: 0;
@@ -603,7 +624,6 @@ input[type=number] {
   left: -250px;
   top: -10px;
   width: 250px;
-  transition: max-height 500ms ease;
 }
 .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner2 {
   left: -130px;
@@ -652,7 +672,8 @@ input[type=number] {
     position: static;
     list-style: none;
     background-color: #fff;
-    width: 100%;
+    width: 120%;
+    margin-left: -15px;
     box-shadow: 0px 0px 10px 0px rgba(7, 7, 7, 0.062745098);
     left: 0px;
     overflow: hidden;
@@ -661,7 +682,7 @@ input[type=number] {
     transition: max-height 250ms ease-in;
   }
   .header .navbar .nav-container .list-items li ul li {
-    padding: 5px 10px;
+    padding: 5px 18px;
   }
   .header .navbar .nav-container .list-items li ul li a {
     margin: 0;
@@ -679,18 +700,20 @@ input[type=number] {
     background-color: #0632AD;
   }
   .header .navbar .nav-container .list-items li .aesthetic-dropdown {
-    width: 100%;
+    width: 120%;
+    margin-left: -15px;
   }
   .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner {
     margin-top: 0px;
-    margin-left: -10px;
-    width: 107%;
+    margin-left: -28px;
+    padding: 0 0 0 15px;
+    width: 110%;
     transition: max-height 500ms ease;
   }
   .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner2 {
-    margin-left: -10px;
-    width: 107%;
     margin-top: 0;
+    width: 120%;
+    margin-left: -15px;
   }
   .header .navbar .nav-container .list-items li .aesthetic-dropdown .aesthetic-dropdown-inner .aesthetic-dropdown-inner2 li {
     padding: 5px 15px;
@@ -3055,6 +3078,612 @@ input[type=number] {
   .review-container .review-box .further-review-links .images a:last-child img {
     max-width: 160px;
     margin-left: 50px;
+  }
+}
+.about-section {
+  background-image: url(../images/about-hero.jpg);
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-section .about-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-section .about-container .about-hero {
+  background-color: #fff;
+  padding: 10px 30px;
+}
+.about-section .about-container .about-hero h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #0632AD;
+}
+
+.aboutus-section {
+  padding: 2em 0;
+}
+.aboutus-section .aboutus-container .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.aboutus-section .aboutus-container .flex-container .col .heading {
+  margin: 20px 0 30px 0;
+}
+.aboutus-section .aboutus-container .flex-container .col .heading h1 {
+  font-weight: 600;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #0B3E72;
+}
+.aboutus-section .aboutus-container .flex-container .col .info-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.aboutus-section .aboutus-container .flex-container .col .info-section .img {
+  display: inline-block;
+}
+.aboutus-section .aboutus-container .flex-container .col .info-section .img img {
+  width: 100%;
+  max-width: 400px;
+}
+.aboutus-section .aboutus-container .flex-container .col .info-section .detail {
+  padding: 10px 0 0 40px;
+}
+.aboutus-section .aboutus-container .flex-container .col .info-section .detail ul {
+  font-weight: 300;
+  font-size: 18px;
+  color: #505050;
+  list-style-type: none;
+}
+.aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li {
+  position: relative;
+  padding: 4px 0;
+}
+.aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li::after {
+  content: "";
+  position: absolute;
+  background-color: #505050;
+  width: 3px;
+  height: 3px;
+  border-radius: 50px;
+  left: -12px;
+  top: 15px;
+}
+.aboutus-section .aboutus-container #col-2 {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content {
+  padding-left: 20px;
+  position: -webkit-sticky;
+  top: 0;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container {
+  background-color: #FAFAFC;
+  border: 1px solid #E0E0E0;
+  outline: none;
+  width: 380px;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body {
+  width: 100%;
+  padding: 15px 20px;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body .form-head {
+  padding: 10px 0 15px 0;
+  text-align: center;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body .form-head h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form {
+  width: 100%;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form .input-field {
+  width: 100%;
+  padding: 10px 0;
+  overflow-x: hidden;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form .input-field input,
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form .input-field textarea {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form .input-field input:hover, .aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form .input-field input:focus,
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form .input-field textarea:hover,
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form .input-field textarea:focus {
+  border-color: #0632AD;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form .input-field textarea {
+  padding-top: 14px;
+  width: 100%;
+  font-size: 14px;
+  max-width: 100%;
+  min-width: 100%;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form .input-field button {
+  width: 100%;
+  height: 50px;
+  background-color: #0632AD;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+.aboutus-section .aboutus-container #col-2 .sidebar-content .form-container .form-body form .input-field button:hover {
+  background-color: #204ece;
+}
+.aboutus-section .aboutus-container .more-details {
+  padding: 40px 0;
+}
+.aboutus-section .aboutus-container .more-details p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  color: #505050;
+}
+.aboutus-section .aboutus-container .more-details p span {
+  font-weight: bold;
+}
+
+.experience-section {
+  position: relative;
+}
+.experience-section::after {
+  content: "";
+  position: absolute;
+  background-color: #BBBBBB;
+  width: 98%;
+  height: 1px;
+  top: -30px;
+  left: 5px;
+}
+.experience-section .head {
+  text-align: center;
+}
+.experience-section .head h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  color: #000000;
+  margin-bottom: 50px;
+  padding-top: 20px;
+}
+.experience-section .experience-container {
+  padding-top: 10px;
+  padding-bottom: 5em;
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+  display: grid;
+  row-gap: 70px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+}
+.experience-section .experience-container .card {
+  text-align: center;
+}
+.experience-section .experience-container .card img {
+  max-width: 65px;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.experience-section .experience-container .card h4 {
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1330px) {
+  .about-section {
+    height: 35vh;
+  }
+  .about-section .about-container .about-hero h1 {
+    font-size: 50px;
+  }
+  .aboutus-section {
+    padding: 2em 20px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading {
+    margin: 20px 0 30px 0;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading h1 {
+    font-size: 30px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img {
+    width: 100%;
+    display: inline-block;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail {
+    padding: 10px 0 0 30px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul {
+    font-size: 16px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li {
+    padding: 2px 0;
+  }
+  .aboutus-section .aboutus-container .more-details {
+    padding: 30px 0;
+  }
+  .aboutus-section .aboutus-container .more-details p {
+    font-size: 17px;
+  }
+  .experience-section::after {
+    width: 95%;
+    top: -15px;
+    left: 20px;
+  }
+  .experience-section .head {
+    text-align: center;
+  }
+  .experience-section .head h1 {
+    font-size: 28px;
+  }
+  .experience-section .experience-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .experience-section .experience-container .card {
+    text-align: center;
+  }
+  .experience-section .experience-container .card img {
+    max-width: 60px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .aboutus-section {
+    padding: 2em 20px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading {
+    margin: 20px 0 30px 0;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading h1 {
+    font-size: 30px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img {
+    width: auto;
+    display: inline-block;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img img {
+    width: 100%;
+    max-width: 320px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail {
+    padding: 10px 0 0 30px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul {
+    font-size: 18px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li {
+    padding: 4px 0;
+  }
+  .aboutus-section .aboutus-container .flex-container #col-2 {
+    display: none;
+  }
+  .aboutus-section .aboutus-container .more-details {
+    padding: 30px 0;
+  }
+  .aboutus-section .aboutus-container .more-details p {
+    font-size: 17px;
+  }
+  .experience-section::after {
+    width: 95%;
+    top: -15px;
+    left: 20px;
+  }
+  .experience-section .head {
+    text-align: center;
+  }
+  .experience-section .head h1 {
+    font-size: 28px;
+  }
+  .experience-section .experience-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    width: 100%;
+    max-width: 100%;
+  }
+  .experience-section .experience-container .card {
+    text-align: center;
+  }
+  .experience-section .experience-container .card img {
+    max-width: 60px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .about-section {
+    height: 30vh;
+  }
+  .about-section .about-container .about-hero h1 {
+    font-size: 45px;
+  }
+  .aboutus-section {
+    padding: 2em 20px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading {
+    margin: 20px 0 30px 0;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading h1 {
+    font-size: 28px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img {
+    width: auto;
+    display: inline-block;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img img {
+    width: 100%;
+    max-width: 330px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail {
+    padding: 10px 0 0 30px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul {
+    font-size: 17px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li {
+    padding: 4px 0;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .about-section {
+    height: 25vh;
+  }
+  .about-section .about-container .about-hero h1 {
+    font-size: 40px;
+  }
+  .aboutus-section {
+    padding: 2em 20px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading {
+    margin: 20px 0 30px 0;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading h1 {
+    font-size: 28px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img img {
+    width: 100%;
+    max-width: 350px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul {
+    font-size: 16px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li {
+    padding: 4px 0;
+  }
+  .aboutus-section .aboutus-container .more-details p {
+    font-size: 15px;
+  }
+  .experience-section::after {
+    width: 95%;
+    top: -15px;
+    left: 20px;
+  }
+  .experience-section .head {
+    text-align: center;
+  }
+  .experience-section .head h1 {
+    font-size: 25px;
+  }
+  .experience-section .experience-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    width: 100%;
+    max-width: 100%;
+  }
+  .experience-section .experience-container .card {
+    text-align: center;
+  }
+  .experience-section .experience-container .card img {
+    max-width: 60px;
+  }
+  .experience-section .experience-container .card h4 {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .aboutus-section {
+    padding: 2em 20px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading {
+    margin: 20px 0 30px 0;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading h1 {
+    font-size: 28px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img {
+    width: auto;
+    display: inline-block;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img img {
+    width: 100%;
+    max-width: 350px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail {
+    padding: 0px 0 0 30px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul {
+    font-size: 15px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li {
+    padding: 3px 0;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li::after {
+    content: "";
+    position: absolute;
+    background-color: #505050;
+    width: 3px;
+    height: 3px;
+    border-radius: 50px;
+    left: -12px;
+    top: 11px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .aboutus-section {
+    padding: 1.5em 20px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading {
+    margin: 20px 0 30px 0;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading h1 {
+    font-size: 25px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img {
+    width: auto;
+    display: inline-block;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img img {
+    width: 100%;
+    max-width: 350px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail {
+    padding: 0px 0 0 30px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul {
+    font-size: 14px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li {
+    padding: 2px 0;
+  }
+  .aboutus-section .aboutus-container .more-details p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .about-section {
+    background-position: left center;
+  }
+  .about-section .about-container .about-hero h1 {
+    font-size: 42px;
+  }
+  .aboutus-section {
+    padding: 1.5em 20px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading {
+    margin: 20px 0 30px 0;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading h1 {
+    font-size: 22px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img {
+    width: auto;
+    display: inline-block;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img img {
+    width: 100%;
+    max-width: 380px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail {
+    padding: 10px 0 0 30px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul {
+    font-size: 15px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li {
+    padding: 3px 0;
+  }
+  .aboutus-section .aboutus-container .more-details p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .about-section {
+    height: 30vh;
+    background-position: left center;
+  }
+  .about-section .about-container .about-hero {
+    padding: 0;
+  }
+  .about-section .about-container .about-hero h1 {
+    padding: 10px 20px;
+    font-size: 35px;
+  }
+  .aboutus-section {
+    padding: 1.5em 20px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading {
+    margin: 20px 0 30px 0;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .heading h1 {
+    font-size: 23px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img {
+    width: auto;
+    display: inline-block;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .img img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail {
+    padding: 10px 0 0 10px;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul {
+    font-size: 14px;
+    line-height: 1.7em;
+  }
+  .aboutus-section .aboutus-container .flex-container .col .info-section .detail ul li {
+    padding: 1px 0;
+  }
+  .aboutus-section .aboutus-container .more-details p {
+    font-size: 14px;
+  }
+  .experience-section::after {
+    width: 95%;
+    top: -20px;
+    left: 10px;
+  }
+  .experience-section .head {
+    text-align: center;
+  }
+  .experience-section .head h1 {
+    font-size: 20px;
+  }
+  .experience-section .experience-container {
+    row-gap: 40px;
+  }
+  .experience-section .experience-container .card {
+    text-align: center;
+  }
+  .experience-section .experience-container .card img {
+    max-width: 60px;
+  }
+  .experience-section .experience-container .card h4 {
+    font-size: 15px;
   }
 }
 /************ Footer Styling ***************/

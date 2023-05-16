@@ -9,6 +9,7 @@
 
                     &:hover>ul {
                         max-height: 100px;
+                        transition: max-height 250ms ease-out;
                     }
 
                     &:hover>.aesthetic-dropdown {
@@ -18,14 +19,17 @@
 
                     &:hover>.aesthetic-dropdown-inner {
                         max-height: 260px;
+                        transition: max-height 500ms ease;
                     }
 
                     &:hover>.aesthetic-dropdown-inner2 {
                         max-height: 120px;
+                        transition: max-height 500ms ease;
                     }
 
                     &:hover>.aesthetic-dropdown-inner3 {
                         max-height: 150px;
+                        transition: max-height 500ms ease;
                     }
 
                     ul {
@@ -38,7 +42,6 @@
                         overflow: hidden;
                         margin-top: 10px;
                         max-height: 0;
-                        transition: max-height 250ms ease-in;
 
 
                         a {
@@ -67,7 +70,6 @@
                             left: -250px;
                             top: -10px;
                             width: 250px;
-                            transition: max-height 500ms ease;
 
                             .aesthetic-dropdown-inner2 {
                                 left: -130px;
@@ -144,7 +146,8 @@
                             position: static;
                             list-style: none;
                             background-color: #fff;
-                            width: 100%;
+                            width: 120%;
+                            margin-left: -15px;
                             box-shadow: 0px 0px 10px 0px #07070710;
                             left: 0px;
                             overflow: hidden;
@@ -153,7 +156,7 @@
                             transition: max-height 250ms ease-in;
 
                             li {
-                                padding: 5px 10px;
+                                padding: 5px 18px;
 
                                 a {
                                     margin: 0;
@@ -175,21 +178,24 @@
                         }
 
                         .aesthetic-dropdown {
-                            width: 100%;
+                            width: 120%;
+                            margin-left: -15px;
 
                             .aesthetic-dropdown-inner {
                                 margin-top: 0px;
-                                margin-left: -10px;
-                                width: 107%;
+                                margin-left: -28px;
+                                padding: 0 0 0 15px;
+                                width: 110%;
                                 transition: max-height 500ms ease;
 
                                 .aesthetic-dropdown-inner2 {
-                                    margin-left: -10px;
-                                    width: 107%;
                                     margin-top: 0;
+                                    width: 120%;
+                                    margin-left: -15px;
 
                                     li {
                                         padding: 5px 15px;
+
 
                                         a {
                                             width: 105%;
