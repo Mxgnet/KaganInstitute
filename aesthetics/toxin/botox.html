@@ -61,7 +61,8 @@
         <!-- Fetching FROM JQUERY LOAD -->
     </div>
     <!----------- HERO SECTION ---------------->
-    <div class="container-full-width">
+    <div class="container-full-width"
+        style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../assets/hero-img1.png); background-position: center center; object-fit: cover; background-size: cover;">
         <div class="hero-section">
             <div class="inner-container">
                 <div class="hero-container">
@@ -248,6 +249,12 @@
                                 </div>
                             </div>
 
+                            <!-- REVIEWS SECTION -->
+
+                            <div class="side-review">
+                                <!-- Check in JQUERY -->
+                            </div>
+
                             <!-- Recent Posts Section -->
 
                             <section id="post">
@@ -255,31 +262,38 @@
                                     <div class="post-head">
                                         <h1>Recent Posts</h1>
                                     </div>
+                                   
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="../assets/recent-1.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <h3>Who Is a Good Candidate for a Nonsurgical Nose Job?</h3>
-                                        </div>
+                                        <a href="/blogs/nonsurgical.html">
+                                            <div class="post-img">
+                                                <img src="/blogs/assets/recent-5.png" alt="" style="border-radius: 11px 11px 0 0;">
+                                            </div>
+                                            <div class="post-title">
+                                                <h3>Is Xeomin a Replacement for Botox?</h3>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="../assets/recent-2.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <h3>How Soon Do You See Results From Juvederm?</h3>
-                                        </div>
+                                        <a href="/aesthetics/fillers/juvederm.html">
+                                            <div class="post-img">
+                                                <img src="../assets/recent-2.png" alt="">
+                                            </div>
+                                            <div class="post-title">
+                                                <h3>How Soon Do You See Results From Juvederm?</h3>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="../assets/recent-3.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <a href="/blogs/blog.html">
-                                                <h3>Blepharoplasty: Good Candidate For This Procedure?</h3>
-                                            </a>
-                                        </div>
+                                        <a href="/blogs/blepharoplasty.html">
+                                            <div class="post-img">
+                                                <img src="../assets/recent-3.png" alt="">
+                                            </div>
+                                            <div class="post-title">
+                                                <a href="/blogs/blog.html">
+                                                    <h3>Blepharoplasty: Good Candidate For This Procedure?</h3>
+                                                </a>    
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </section>
@@ -295,34 +309,40 @@
             <section class="swiper mySwiper" id="recentPost-slider">
                 <div class="swiper-wrapper">
                     <div class="post-silder swiper-slide">
-                        <div class="posts-card">
-                            <div class="post-img">
-                                <img src="../assets/recent-1.png" alt="">
+                        <a href="/blogs/nonsurgical.html">
+                            <div class="posts-card">
+                                <div class="post-img">
+                                    <img src="../assets/recent-1.png" alt="">
+                                </div>
+                                <div class="post-title">
+                                    <h3>Who Is a Good Candidate for a Nonsurgical Nose Job?</h3>
+                                </div>
                             </div>
-                            <div class="post-title">
-                                <h3>Who Is a Good Candidate for a Nonsurgical Nose Job?</h3>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="post-silder swiper-slide">
-                        <div class="posts-card">
-                            <div class="post-img">
-                                <img src="../assets/recent-2.png" alt="">
+                        <a href="/aesthetics/fillers/juvederm.html">
+                            <div class="posts-card">
+                                <div class="post-img">
+                                    <img src="../assets/recent-2.png" alt="">
+                                </div>
+                                <div class="post-title">
+                                    <h3>How Soon Do You See Results From Juvederm?</h3>
+                                </div>
                             </div>
-                            <div class="post-title">
-                                <h3>How Soon Do You See Results From Juvederm?</h3>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="post-silder swiper-slide">
-                        <div class="posts-card">
-                            <div class="post-img">
-                                <img src="../assets/recent-3.png" alt="">
+                        <a href="/aesthetics/fillers/bolotero.html">
+                            <div class="posts-card">
+                                <div class="post-img">
+                                    <img src="../assets/recent-3.png" alt="">
+                                </div>
+                                <div class="post-title">
+                                    <h3>LASIK Procedure</h3>
+                                </div>
                             </div>
-                            <div class="post-title">
-                                <h3>LASIK Procedure</h3>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="post-silder swiper-slide">
                         <div class="posts-card">
@@ -384,11 +404,12 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <script>
+
         $(function () {
             $(".header").load("/header.html");
-        });
-        $(function () {
             $("#footer").load("/footer.html");
+            $(".side-review").load("/sidebar-review.html");
+
         });
     </script>
 

@@ -73,7 +73,6 @@
         </div>
     </div>
 
-
     <!------------- BLOG CONTENT --------------->
     <div class="container-width">
         <div class="inner-container procedure-container">
@@ -129,7 +128,6 @@
 
                             <!-- Row 2 of Col - 1 -->
 
-
                             <div class="row-container1">
                                 <div class="procedure-head">
                                     <h1>What to Expect</h1>
@@ -169,12 +167,14 @@
                             <div class=" botox-para procedure-text">
                                 <p>If you are ready to make aging signs a problem of the past, reach out to the
                                     professionals here at the Kagan Institute and schedule your consultation to learn
-                                    more about personalized Juvederm treatments.<a href="#">Dr. Arkady Kagan</a> and his professional
+                                    more about personalized Juvederm treatments.<a href="#">Dr. Arkady Kagan</a> and his
+                                    professional
                                     staff proudly serve California with locations in Encino and Los Angeles. Contact us
                                     today and <a href="#">schedule your consultation!</a></p>
                             </div>
                         </div>
                     </div>
+
                     <!-- Side Bar Section -->
                     <div class="col-2">
                         <div class="sidebar-content">
@@ -204,6 +204,12 @@
                                 </div>
                             </div>
 
+                            <!-- REVIEWS SECTION -->
+
+                            <div class="side-review">
+                                <!-- Check in JQUERY -->
+                            </div>
+
                             <!-- Recent Posts Section -->
 
                             <section id="post">
@@ -212,20 +218,24 @@
                                         <h1>Recent Posts</h1>
                                     </div>
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="../assets/recent-1.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <h3>Who Is a Good Candidate for a Nonsurgical Nose Job?</h3>
-                                        </div>
+                                        <a href="/aesthetics/toxin/xeomin.html">
+                                            <div class="post-img">
+                                                <img src="../assets/recent-5.png" alt="">
+                                            </div>
+                                            <div class="post-title">
+                                                <h3>Is Xeomin a Replacement for Botox?</h3>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="../assets/recent-2.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <h3>How Soon Do You See Results From Juvederm?</h3>
-                                        </div>
+                                        <a href="/aesthetics/toxin/botox.html">
+                                            <div class="post-img">
+                                                <img src="../assets/recent-4.png" alt="">
+                                            </div>
+                                            <div class="post-title">
+                                                <h3>How Long Does Cosmetic Botox Last?</h3>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="posts-card">
                                         <div class="post-img">
@@ -343,10 +353,10 @@
 
         $(function () {
             $(".header").load("/header.html");
-        });
-        $(function () {
             $("#footer").load("/footer.html");
+            $(".side-review").load("/sidebar-review.html");
         });
+
     </script>
 
     <!-- INITIALIZING SWIPER -->

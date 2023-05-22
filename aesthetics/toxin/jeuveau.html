@@ -94,18 +94,6 @@
                                     treatments to combat
                                     aging skin for years to come.</p>
                             </div>
-                            <div class="procedure-head">
-                                <h1>What Is Jeuveau?</h1>
-                            </div>
-                            <div class="procedure-text">
-                                <p>Jeuveau™ is the latest injectable created by Evolus to be approved by the FDA for the
-                                    temporary treatment of moderate-to-severe aging signs within skin. It is being
-                                    recognized as the latest and greatest BOTOX alternative. Similar to BOTOX, Jeuveau
-                                    is an acetylcholine release inhibitor and neurotoxin, meaning it prevents
-                                    wrinkle-causing muscle contractions to preserve smooth and younger-looking skin.
-                                    What makes Jeuveau different from other neurotoxins is that it is the first 900 kDa
-                                    molecule toxin since BOTOX was released.</p>
-                            </div>
 
                             <div class="procedure-head">
                                 <h1>What Is Jeuveau?</h1>
@@ -178,6 +166,7 @@
 
                         </div>
                     </div>
+
                     <!-- Side Bar Section -->
                     <div class="col-2">
                         <div class="sidebar-content">
@@ -207,6 +196,13 @@
                                 </div>
                             </div>
 
+
+                            <!-- REVIEWS SECTION -->
+
+                            <div class="side-review">
+                                <!-- Check in JQUERY -->
+                            </div>
+
                             <!-- Recent Posts Section -->
 
                             <section id="post">
@@ -215,30 +211,36 @@
                                         <h1>Recent Posts</h1>
                                     </div>
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="../assets/recent-1.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <h3>Who Is a Good Candidate for a Nonsurgical Nose Job?</h3>
-                                        </div>
+                                        <a href="/blogs/nonsurgical.html">
+                                            <div class="post-img">
+                                                <img src="../assets/recent-1.png" alt="">
+                                            </div>
+                                            <div class="post-title">
+                                                <h3>Who Is a Good Candidate for a Nonsurgical Nose Job?</h3>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="../assets/recent-2.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <h3>How Soon Do You See Results From Juvederm?</h3>
-                                        </div>
+                                        <a href="/aesthetics/fillers/juvederm.html">
+                                            <div class="post-img">
+                                                <img src="../assets/recent-2.png" alt="">
+                                            </div>
+                                            <div class="post-title">
+                                                <h3>How Soon Do You See Results From Juvederm?</h3>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="../assets/recent-3.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <a href="/blogs/blog.html">
-                                                <h3>Blepharoplasty: Good Candidate For This Procedure?</h3>
-                                            </a>
-                                        </div>
+                                        <a href="/blogs/blepharoplasty.html">
+                                            <div class="post-img">
+                                                <img src="../assets/recent-3.png" alt="">
+                                            </div>
+                                            <div class="post-title">
+                                                <a href="/blogs/blog.html">
+                                                    <h3>Blepharoplasty: Good Candidate For This Procedure?</h3>
+                                                </a>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </section>
@@ -345,9 +347,8 @@
     <script>
         $(function () {
             $(".header").load("/header.html");
-        });
-        $(function () {
             $("#footer").load("/footer.html");
+            $(".side-review").load("/sidebar-review.html");
         });
     </script>
 

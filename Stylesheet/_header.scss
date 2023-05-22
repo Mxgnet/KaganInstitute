@@ -336,14 +336,23 @@
                         align-items: start;
                         padding-left: 30px;
                         padding: 15px 20px;
+                        overflow-x: hidden;
 
                         a {
                             @include sub-paragraph(14px);
+                            width: 150%;
+                            display: block;
+                            padding-left: 35px;
+                            margin-left: -25px;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                            margin-top: -20px;
+                            padding-bottom: 20px;
 
                             #arrow {
                                 font-size: 18px;
                                 top: 10px;
                                 position: absolute;
+                                right: 20vw;
                                 transform: rotate(180deg);
                                 transition: transform 200ms ease;
                             }
@@ -479,7 +488,10 @@
 
                         a {
                             @include sub-paragraph(13px);
+
                         }
+
+
                     }
 
                     .nav-btn {
@@ -529,6 +541,15 @@
                         img {
                             width: 100%;
                             max-width: 160px !important;
+                        }
+                    }
+
+                    li {
+                        a {
+
+                            #arrow {
+                                right: 25vw;
+                            }
                         }
                     }
 

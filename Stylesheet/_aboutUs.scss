@@ -183,7 +183,7 @@
         }
 
         .more-details {
-            padding: 40px 0;
+            padding: 40px 20px;
 
             p {
 
@@ -275,6 +275,10 @@
                     @include heading(50px);
                 }
             }
+        }
+
+        .more-details{
+            padding: auto 20px;
         }
     }
 
@@ -758,7 +762,7 @@
                         margin: 20px 0 30px 0;
 
                         h1 {
-                            @include sub-heading(22px);
+                            @include sub-heading(20px);
                         }
                     }
 
@@ -773,7 +777,7 @@
 
                             img {
                                 width: 100%;
-                                max-width: 380px;
+                                max-width: 300px;
                             }
                         }
 

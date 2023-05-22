@@ -36,6 +36,70 @@ PopupForm_Btn.onclick = function () {
     }
 }
 
+// COUNTER FOR ABOUT US PAGE
+
+const myNum = document.querySelectorAll('.count');
+let speed = 24;
+
+const Experienced_Section = document.querySelector(".experience-section");
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+
+                myNum.forEach((myCount) => {
+
+                    let target_Count = myCount.dataset.count;
+                    let init_Count = +myCount.innerText;
+
+                    let new_increment_speed = Math.floor(target_Count / speed);
+
+                    const updateNumber = () => {
+                        init_Count += new_increment_speed;
+                        myCount.innerText = init_Count;
+
+                        if (init_Count < target_Count) {
+                            setTimeout(() => {
+                                updateNumber()
+                            }, 50);
+                        }
+                    }
+
+                    updateNumber();
+
+                })
+                return;
+            }
+
+        });
+    },
+    {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.4
+    }
+);
+observer.observe(Experienced_Section);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function truncateText(selector, maxLength) {
 //     var element = document.querySelector(selector),
 //         truncated = element.innerText;

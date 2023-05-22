@@ -356,6 +356,12 @@
                                 </div>
                             </div>
 
+                            <!-- REVIEWS SECTION -->
+
+                            <div class="side-review">
+                                <!-- Check in JQUERY -->
+                            </div>
+
                             <!-- Recent Posts Section -->
                             <section id="post">
                                 <div class="post-container">
@@ -363,28 +369,34 @@
                                         <h1>Other Articles</h1>
                                     </div>
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="assets/recent-1.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <h3>Who Is a Good Candidate for a Nonsurgical Nose Job?</h3>
-                                        </div>
+                                        <a href="/blogs/nonsurgical.html">
+                                            <div class="post-img">
+                                                <img src="assets/recent-1.png" alt="">
+                                            </div>
+                                            <div class="post-title">
+                                                <h3>Who Is a Good Candidate for a Nonsurgical Nose Job?</h3>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="assets/recent-2.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <h3>How Soon Do You See Results From Juvederm?</h3>
-                                        </div>
+                                        <a href="/aesthetics/fillers/juvederm.html">
+                                            <div class="post-img">
+                                                <img src="assets/recent-2.png" alt="">
+                                            </div>
+                                            <div class="post-title">
+                                                <h3>How Soon Do You See Results From Juvederm?</h3>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="posts-card">
-                                        <div class="post-img">
-                                            <img src="/images/contaract.png" alt="">
-                                        </div>
-                                        <div class="post-title">
-                                            <h3>LASIK Procedure</h3>
-                                        </div>
+                                        <a href="/aesthetics/toxin/botox.html">
+                                            <div class="post-img">
+                                                <img src="/blogs/assets/recent-4.png" alt="">
+                                            </div>
+                                            <div class="post-title">
+                                                <h3>How Long Does Cosmetic Botox Last?</h3>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </section>
@@ -392,6 +404,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Mobile Recent Post Slider -->
             <div class="post-head">
                 <h1>Other Articles</h1>
@@ -502,9 +515,9 @@
 
         $(function () {
             $(".header").load("/header.html");
-        });
-        $(function () {
             $("#footer").load("/footer.html");
+            $(".side-review").load("/sidebar-review.html");
+
         });
     </script>
 

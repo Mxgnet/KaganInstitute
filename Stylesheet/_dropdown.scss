@@ -9,6 +9,7 @@
 
                     &:hover>ul {
                         max-height: 100px;
+                        margin-top: 10px;
                         transition: max-height 250ms ease-out;
                     }
 
@@ -40,7 +41,7 @@
                         box-shadow: 0px 0px 10px 0px #07070710;
                         left: 0px;
                         overflow: hidden;
-                        margin-top: 10px;
+                        margin-top: 0;
                         max-height: 0;
 
 
@@ -123,6 +124,8 @@
 
                         &:focus-within>ul {
                             max-height: 200px;
+                            margin-top: 0;
+
                         }
 
                         &:focus-within>.aesthetic-dropdown {
@@ -145,13 +148,14 @@
                         ul {
                             position: static;
                             list-style: none;
-                            background-color: #fff;
+                            background-color: transparent;
                             width: 120%;
                             margin-left: -15px;
-                            box-shadow: 0px 0px 10px 0px #07070710;
+                            box-shadow: none;
                             left: 0px;
                             overflow: hidden;
-                            margin-top: 10px;
+                            margin-top: 0px;
+                            transition: max-height 700ms ease-out;
                             max-height: 0;
                             transition: max-height 250ms ease-in;
 
@@ -162,7 +166,7 @@
                                     margin: 0;
                                     width: 100%;
                                     display: block;
-                                    font-size: 13px;
+                                    font-size: 14px;
                                     width: 105%;
                                     margin-left: -10px;
                                     top: 0;
@@ -178,41 +182,44 @@
                         }
 
                         .aesthetic-dropdown {
-                            width: 120%;
-                            margin-left: -15px;
+                            width: 140%;
+                            margin-left: -25px;
+
 
                             .aesthetic-dropdown-inner {
                                 margin-top: 0px;
-                                margin-left: -28px;
+                                margin-left: -50px;
                                 padding: 0 0 0 15px;
-                                width: 110%;
+                                width: 120%;
                                 transition: max-height 500ms ease;
 
                                 .aesthetic-dropdown-inner2 {
                                     margin-top: 0;
-                                    width: 120%;
-                                    margin-left: -15px;
+                                    width: 100%;
+                                    margin-left: 0px;
 
                                     li {
                                         padding: 5px 15px;
 
 
                                         a {
-                                            width: 105%;
+                                            width: 100%;
                                             margin-left: -10px;
+                                            padding-left: 45px;
                                         }
                                     }
                                 }
 
                                 .aesthetic-dropdown-inner3 {
-                                    margin-left: -10px;
-                                    width: 107%;
+                                    margin-left: -20px;
+                                    width: 100%;
                                     margin-top: 0;
 
                                     li {
                                         a {
                                             width: 100%;
                                             margin-left: 0;
+                                            padding-left: 45px;
                                         }
                                     }
                                 }
@@ -220,12 +227,23 @@
                                 &:focus-within {
                                     overflow: visible;
                                 }
+
+                                li {
+                                    a {
+                                        padding-left: 50px;
+                                    }
+                                }
                             }
 
                             &:focus-within {
                                 overflow: visible;
                             }
 
+                            li {
+                                a {
+                                    padding-left: 30px;
+                                }
+                            }
                         }
                     }
                 }
