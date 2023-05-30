@@ -94,7 +94,7 @@
     //*********** Navbar Styling ***************//
 
     .navbar {
-        padding: 0px 10px;
+        padding: 10px 10px;
 
         .nav-container {
             display: flex;
@@ -129,6 +129,8 @@
                     text-decoration: none;
                     margin: 0 10px;
                     padding: 10px 0;
+                    width: 100%;
+                    display: inline-block;
                     position: relative;
                     @include sub-paragraph(15px);
                     text-transform: capitalize;
@@ -306,25 +308,28 @@
 
             .nav-container {
                 .list-items {
+                    clear: both;
                     position: fixed;
-                    background-color: aliceblue;
+                    background-color: rgb(255, 255, 255);
                     width: 50%;
                     flex-direction: column;
                     right: -1000%;
-                    /* display: none; */
                     top: 0;
                     z-index: 30;
                     height: 100%;
+                    overflow: auto;
                     justify-content: start;
                     align-items: start;
-                    overflow-y: scroll;
                     transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
 
                     .logo {
                         display: block;
-                        padding: 20px 25px;
+                        padding: 20px 15px;
+                        margin-left: -20px;
                         pointer-events: none;
                         user-select: none;
+                        text-align: center;
+                        width: 100%;
 
                         img {
                             max-width: 200px;
@@ -336,15 +341,16 @@
                         align-items: start;
                         padding-left: 30px;
                         padding: 15px 20px;
-                        overflow-x: hidden;
+                        overflow: clip;
 
                         a {
-                            @include sub-paragraph(14px);
+                            @include sub-paragraph(16px);
                             width: 150%;
+                            font-weight: 300;
                             display: block;
                             padding-left: 35px;
                             margin-left: -25px;
-                            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                             margin-top: -20px;
                             padding-bottom: 20px;
 
@@ -362,10 +368,10 @@
                     .remove {
                         display: block;
                         position: absolute;
-                        right: 15px;
-                        top: 10px;
+                        right: 20px;
+                        top: 30px;
                         cursor: pointer;
-                        font-size: 25px;
+                        font-size: 28px;
                     }
 
                     .nav-btn {
@@ -477,7 +483,7 @@
 
                         img {
                             width: 100%;
-                            max-width: 160px !important;
+                            max-width: 180px !important;
                         }
                     }
 
@@ -487,8 +493,11 @@
                         padding: 15px;
 
                         a {
-                            @include sub-paragraph(13px);
+                            @include sub-paragraph(16px);
 
+                            #arrow {
+                                right: 25vw;
+                            }
                         }
 
 
@@ -496,11 +505,22 @@
 
                     .nav-btn {
                         margin-left: 10px;
+
+                        button {
+                            width: 150px;
+                            padding-right: 5px;
+
+                            svg {
+                                @include sub-paragraph(16px);
+                                margin-left: 0px;
+                            }
+                        }
                     }
 
                     .remove {
-                        right: 7px;
-                        top: 17px;
+                        right: 25px;
+                        top: 20px;
+                        font-size: 28px;
                     }
                 }
 
@@ -533,7 +553,7 @@
                 }
 
                 .list-items {
-                    width: 70%;
+                    width: 80%;
 
                     .logo {
                         padding: 20px;
@@ -548,13 +568,15 @@
                         a {
 
                             #arrow {
-                                right: 25vw;
+                                right: 33vw;
                             }
                         }
                     }
 
                     .remove {
-                        right: 16px;
+                        right: 25px;
+                        top: 20px;
+                        font-size: 28px;
                     }
                 }
             }

@@ -43,6 +43,7 @@
                         overflow: hidden;
                         margin-top: 0;
                         max-height: 0;
+                        top: 28px;
 
 
                         a {
@@ -118,34 +119,37 @@
         .navbar {
             .nav-container {
                 .list-items {
+
                     li {
                         position: relative;
                         width: 100%;
+                        a {
+                            &.active~ul {
+                                max-height: 200px;
+                                margin-top: 0;
+                            }
 
-                        &:focus-within>ul {
-                            max-height: 200px;
-                            margin-top: 0;
+                            &.active~.aesthetic-dropdown {
+                                max-height: 999px;
+                            }
 
-                        }
-
-                        &:focus-within>.aesthetic-dropdown {
-                            max-height: 999px;
-                        }
+                            &.active~.aesthetic-dropdown-inner {
+                                max-height: 999px;
+                            }
 
 
-                        &:focus-within>.aesthetic-dropdown-inner {
-                            max-height: 999px;
-                        }
+                            &.active~.aesthetic-dropdown-inner2 {
+                                max-height: 999px;
+                            }
 
-                        &:focus-within>.aesthetic-dropdown-inner2 {
-                            max-height: 999px;
-                        }
 
-                        &:focus-within>.aesthetic-dropdown-inner3 {
-                            max-height: 999px;
+                            &.active~.aesthetic-dropdown-inner3 {
+                                max-height: 999px;
+                            }
                         }
 
                         ul {
+                            clear: both;
                             position: static;
                             list-style: none;
                             background-color: transparent;
@@ -155,7 +159,6 @@
                             left: 0px;
                             overflow: hidden;
                             margin-top: 0px;
-                            transition: max-height 700ms ease-out;
                             max-height: 0;
                             transition: max-height 250ms ease-in;
 
@@ -170,7 +173,7 @@
                                     width: 105%;
                                     margin-left: -10px;
                                     top: 0;
-                                    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                                     transition: all 200ms ease;
 
                                     &:hover {
@@ -183,13 +186,13 @@
 
                         .aesthetic-dropdown {
                             width: 140%;
-                            margin-left: -25px;
+                            margin-left: -20px;
 
 
                             .aesthetic-dropdown-inner {
                                 margin-top: 0px;
                                 margin-left: -50px;
-                                padding: 0 0 0 15px;
+                                padding: 0 0 0 25px;
                                 width: 120%;
                                 transition: max-height 500ms ease;
 
@@ -211,7 +214,8 @@
                                 }
 
                                 .aesthetic-dropdown-inner3 {
-                                    margin-left: -20px;
+                                    margin-left: -25px;
+                                    padding: 0 0 0 10px;
                                     width: 100%;
                                     margin-top: 0;
 

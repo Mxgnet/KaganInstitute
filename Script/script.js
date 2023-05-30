@@ -10,11 +10,13 @@ NavBtn.onclick = function () {
     NavBtn.classList.add('active');
     Opacity.classList.add('active');
 }
+
 Opacity.onclick = function () {
     NavList.classList.remove('active');
     NavBtn.classList.remove('active');
     Opacity.classList.remove('active');
 }
+
 Close.forEach(closed => {
     closed.onclick = function () {
         NavList.classList.remove('active');
@@ -23,7 +25,25 @@ Close.forEach(closed => {
         PopForm.classList.remove('active');
         document.querySelector('body').style.overflow = "auto";
     }
+});
+
+
+// DROP DOWN SCRIPT
+
+const NavListItems = document.querySelectorAll('.dropDown-open');
+
+NavListItems.forEach((lists) => {
+    lists.addEventListener('click', () => {
+        if (lists.classList.contains('active')) {
+            lists.classList.remove('active');
+        } else {
+            lists.classList.add('active');
+        }
+
+    })
 })
+
+// POP FORM SCRIPT
 
 PopupForm_Btn.onclick = function () {
     PopForm.classList.add('active');
@@ -81,7 +101,7 @@ const observer = new IntersectionObserver(
 );
 observer.observe(Experienced_Section);
 
-
+// HOME PAGE SCRIPT
 
 
 
